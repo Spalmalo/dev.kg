@@ -1,1 +1,10 @@
 ru:
+  activerecord:
+    attributes:
+      screencast:
+        id: Идентификатор
+        title: Заголовок
+        description: Описание
+        video_url: Ссылка на видео
+        created_at: Создан
+        updated_at: Обновлен
