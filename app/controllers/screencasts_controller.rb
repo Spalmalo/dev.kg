@@ -5,6 +5,7 @@ class ScreencastsController < ApplicationController
   end
 
   def show
+    @screencast = Screencast.find params[:id]
   end
 
 end

@@ -8,4 +8,8 @@ describe 'GET /screencasts/:id' do
   before { get "/screencasts/#{ screencast.to_param }" }
 
   it { is_expected.to be_successful }
+
+  it "should include screencast" do
+    expect(subject.body).to include screencast.title
+  end
 end

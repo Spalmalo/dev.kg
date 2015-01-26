@@ -1,3 +1,11 @@
-<% provide :title, "Screencast #{ params[:id] }" %>
+<% provide :title, @screencast.title %>
 
-<h1>Screencast</h1>
+<h1><%= @screencast.title %></h1>
+
+<div class="thumbnail">
+  <div class="embed-responsive embed-responsive-16by9">
+    <%= youtube_embed @screencast.video_url %>
+  </div>
+</div>
+
+<%== @screencast.description %>
