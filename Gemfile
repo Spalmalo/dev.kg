@@ -8,6 +8,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'russian'
+gem 'bootstrap-sass', '~> 3.3.3'
+gem 'compass-rails', '~> 2.0.4'
 
 group :development do
   gem 'web-console', '~> 2.0'

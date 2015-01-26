@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Screencasts</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <title><%= page_title(yield :title) %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <!--[if lt IE 9]>
+      <%= javascript_include_tag :html5shiv %>
+      <%= javascript_include_tag :respond %>
+    <![endif]-->
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <section id="content">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </section>
+    <%= javascript_include_tag 'application' %>
+  </body>
 </html>

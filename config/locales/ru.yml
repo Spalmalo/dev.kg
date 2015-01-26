@@ -1,4 +1,8 @@
 ru:
+  layout:
+    sitename: 'Spalmalo on Rails'
+  pages:
+    screencast_list: Скринкасты
   activerecord:
     attributes:
       screencast:
