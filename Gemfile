@@ -9,10 +9,15 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'russian'
 
+group :development do
+  gem 'web-console', '~> 2.0'
+end
+
 group :development, :test do
   gem 'pry-byebug'
-  gem 'web-console', '~> 2.0'
+  gem 'ffaker'
   gem 'spring'
+  gem 'timecop'
 end
 
 group :test do
