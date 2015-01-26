@@ -10,6 +10,9 @@ gem 'jquery-rails'
 gem 'russian'
 gem 'bootstrap-sass', '~> 3.3.3'
 gem 'compass-rails', '~> 2.0.4'
+gem 'kaminari'
+gem 'bootstrap-kaminari-views'
+gem 'bootstrap-sass-extras'
 
 group :development do
   gem 'web-console', '~> 2.0'

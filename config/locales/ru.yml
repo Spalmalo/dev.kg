@@ -3,6 +3,9 @@ ru:
     sitename: 'Spalmalo on Rails'
   pages:
     screencast_list: Скринкасты
+  screencast_list_item:
+    published: Опубликован
+    watch: Посмотреть
   activerecord:
     attributes:
       screencast:

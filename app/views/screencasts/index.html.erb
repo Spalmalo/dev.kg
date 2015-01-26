@@ -1,3 +1,11 @@
 <% provide :title, t("pages.screencast_list") %>
 
-<h1>Screencasts index</h1>
+<h1><%= t("pages.screencast_list") %></h1>
+
+<div id="screencasts">
+  <%= render @screencasts %>
+</div>
+
+<div class="text-center">
+  <%= paginate @screencasts, theme: 'twitter-bootstrap-3', window: 1 %>
+</div>

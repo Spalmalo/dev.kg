@@ -1,0 +1,18 @@
+<div class="screencast_item">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <%= link_to image_tag("http://www.placehold.it/320x200", alt: screencast.title ), screencast %>
+      </div>
+    </div>
+    <div class="col-sm-8">
+      <%= link_to content_tag(:h2, screencast.title), screencast %>
+
+      <div class="published_at"><%= t("screencast_list_item.published") %> <time datetime="<%= screencast.created_at.to_s %>"><%= l screencast.created_at, format: :long %></time></div>
+
+      <%== screencast.description %>
+
+      <%= link_to [glyph(:film), t("screencast_list_item.watch")].join(' ').html_safe, screencast %>
+    </div>
+  </div>
+</div>

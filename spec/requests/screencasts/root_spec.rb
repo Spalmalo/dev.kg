@@ -5,5 +5,5 @@ describe 'GET /screencasts' do
 
   before { get '/screencasts' }
 
-  it { should redirect_to root_path }
+  it { is_expected.to redirect_to root_path }
 end
