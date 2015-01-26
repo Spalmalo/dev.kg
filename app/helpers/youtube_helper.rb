@@ -13,4 +13,8 @@ module YoutubeHelper
     params.fetch 'v'
   end
 
+  def youtube_video_thumbnail url
+    "http://img.youtube.com/vi/#{ youtube_video_id url }/hqdefault.jpg"
+  end
+
 end

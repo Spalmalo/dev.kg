@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <%= link_to image_tag("http://www.placehold.it/320x200", alt: screencast.title ), screencast %>
+        <%= link_to image_tag(youtube_video_thumbnail(screencast.video_url), alt: screencast.title ), screencast %>
       </div>
     </div>
     <div class="col-sm-8">
