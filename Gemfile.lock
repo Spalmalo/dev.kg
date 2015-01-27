@@ -93,6 +93,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    devise-bootstrap-views (0.0.3)
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.2.2)
@@ -244,6 +245,7 @@ DEPENDENCIES
   compass-rails (~> 2.0.4)
   database_cleaner
   devise (~> 3.4.1)
+  devise-bootstrap-views
   factory_girl_rails
   ffaker
   friendly_id (~> 5.0.0)

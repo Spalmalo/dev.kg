@@ -7,6 +7,12 @@ ru:
     published: Опубликован
     watch: Посмотреть
   activerecord:
+    models:
+      speaker:
+        one: Спикер
+        few: Спикеры
+        many: Спикеры
+        other: Спикеры
     attributes:
       screencast:
         id: Идентификатор
@@ -15,3 +21,11 @@ ru:
         video_url: Ссылка на видео
         created_at: Создан
         updated_at: Обновлен
+      speaker:
+        id: Идентификатор
+        first_name: Имя
+        last_name: Фамилия
+        email: Email
+        password: Пароль
+        password_confirmation: Подтверждение пароля
+        current_password: Текущий пароль

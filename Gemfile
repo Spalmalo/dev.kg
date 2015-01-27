@@ -17,6 +17,7 @@ gem 'puma'
 gem 'friendly_id', '~> 5.0.0'
 gem 'babosa'
 gem 'devise', '~> 3.4.1'
+gem 'devise-bootstrap-views'
 
 group :production do
   gem 'rails_12factor'
