@@ -40,6 +40,7 @@ GEM
     autoprefixer-rails (5.0.0.3)
       execjs
       json
+    babosa (1.0.2)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-kaminari-views (0.0.5)
@@ -94,6 +95,8 @@ GEM
       railties (>= 3.0.0)
     ffaker (1.31.0)
     ffi (1.9.6)
+    friendly_id (5.0.5)
+      activerecord (>= 4.0.0)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
@@ -220,6 +223,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  babosa
   bootstrap-kaminari-views
   bootstrap-sass (~> 3.3.3)
   bootstrap-sass-extras
@@ -228,6 +232,7 @@ DEPENDENCIES
   database_cleaner
   factory_girl_rails
   ffaker
+  friendly_id (~> 5.0.0)
   jquery-rails
   kaminari
   pg

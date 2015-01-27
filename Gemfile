@@ -14,6 +14,8 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'bootstrap-sass-extras'
 gem 'puma'
+gem 'friendly_id', '~> 5.0.0'
+gem 'babosa'
 
 group :production do
   gem 'rails_12factor'
