@@ -6,6 +6,7 @@ ru:
     sign_up: Регистрация
     profile: Профиль
     sign_out: Выйти
+    avatar: Аватар
   pages:
     screencast_list: Скринкасты
   screencast_list_item:
