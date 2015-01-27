@@ -1,6 +1,11 @@
 ru:
   layout:
     sitename: 'Spalmalo on Rails'
+  speaker:
+    sign_in: Войти
+    sign_up: Регистрация
+    profile: Профиль
+    sign_out: Выйти
   pages:
     screencast_list: Скринкасты
   screencast_list_item:
@@ -29,3 +34,4 @@ ru:
         password: Пароль
         password_confirmation: Подтверждение пароля
         current_password: Текущий пароль
+        remember_me: Запомнить меня

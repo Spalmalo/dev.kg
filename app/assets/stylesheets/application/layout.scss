@@ -1,0 +1,25 @@
+$footer_height: 60px;
+
+html, body {
+  height: 100%;
+}
+
+#content_wrapper {
+  min-height: 100%;
+  height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+  height: 100%;
+  margin: 0 auto (- $footer_height); /* the bottom margin is the negative value of the footer's height */
+}
+
+footer, #push_footer {
+  height: $footer_height;
+}
+
+footer {
+  display: block;
+  background-color: #f5f5f5;
+
+  p {
+    margin-top: 20px;
+  }
+}
