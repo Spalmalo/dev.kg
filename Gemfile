@@ -14,6 +14,10 @@ gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'bootstrap-sass-extras'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'web-console', '~> 2.0'
 end
