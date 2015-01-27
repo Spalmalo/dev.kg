@@ -13,6 +13,7 @@ gem 'compass-rails', '~> 2.0.4'
 gem 'kaminari'
 gem 'bootstrap-kaminari-views'
 gem 'bootstrap-sass-extras'
+gem 'puma'
 
 group :production do
   gem 'rails_12factor'
