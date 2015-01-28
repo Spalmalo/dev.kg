@@ -7,6 +7,13 @@ ru:
   screencast_list_item:
     published: Опубликован
     watch: Посмотреть
+  session:
+    sign_in: Войти
+    sign_out: Выйти
+    sign_in_with_github: Войти через Github
+    unauthorized: Вам необходимо войти!
+    created: Привет, %{nickname}!
+    destroyed: Вы вышли из системы.
   activerecord:
     attributes:
       screencast:

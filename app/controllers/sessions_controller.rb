@@ -1,8 +1,16 @@
 class SessionsController < ApplicationController
 
+  def new
+  end
+
   def create
-    user = User.from_oauth_hash request.env['omniauth.auth']
-    redirect_to root_path, notice: 'Awesome'
+    warden.authenticate!
+    redirect_to session.fetch('requested_path', :root), notice: t('session.created', nickname: current_user.nickname)
+  end
+
+  def destroy
+    warden.logout
+    redirect_to :root, notice: t('session.destroyed')
   end
 
 end
