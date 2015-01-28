@@ -20,6 +20,7 @@ gem 'dotenv-rails'
 gem 'newrelic_rpm'
 gem 'omniauth-github'
 gem 'warden', '~> 1.2.3'
+gem 'disqus_rails'
 
 group :production do
   gem 'rails_12factor'

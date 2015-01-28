@@ -15,4 +15,5 @@
 //= require bootstrap/alert
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
+//= require disqus_rails
 //= require_tree ./application

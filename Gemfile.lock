@@ -86,6 +86,7 @@ GEM
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
+    disqus_rails (0.0.6)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
@@ -259,6 +260,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   compass-rails (~> 2.0.4)
   database_cleaner
+  disqus_rails
   dotenv-rails
   factory_girl_rails
   ffaker
