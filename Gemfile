@@ -16,8 +16,6 @@ gem 'bootstrap-sass-extras'
 gem 'puma'
 gem 'friendly_id', '~> 5.0.0'
 gem 'babosa'
-gem 'devise', '~> 3.4.1'
-gem 'devise-bootstrap-views'
 gem 'dotenv-rails'
 gem 'newrelic_rpm'
 
