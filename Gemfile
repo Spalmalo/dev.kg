@@ -18,6 +18,7 @@ gem 'friendly_id', '~> 5.0.0'
 gem 'babosa'
 gem 'dotenv-rails'
 gem 'newrelic_rpm'
+gem 'omniauth-github'
 
 group :production do
   gem 'rails_12factor'

@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get '/auth/:provider/callback', to: 'sessions#create'
+
   resources :screencasts, only: :show do
     root to: redirect('/')
   end
