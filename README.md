@@ -8,6 +8,10 @@ Install gems:
 
     bundle
 
+Setup environment variables:
+
+    cp .env.example .env && nano .env
+
 Update database configuration for development & test environments:
 
     cp config/database.yml.example config/database.yml && nano config/database.yml
