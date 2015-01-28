@@ -19,6 +19,7 @@ gem 'babosa'
 gem 'devise', '~> 3.4.1'
 gem 'devise-bootstrap-views'
 gem 'dotenv-rails'
+gem 'newrelic_rpm'
 
 group :production do
   gem 'rails_12factor'
