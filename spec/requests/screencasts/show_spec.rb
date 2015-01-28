@@ -5,11 +5,21 @@ describe 'GET /screencasts/:id' do
 
   let!(:screencast) { create :screencast }
 
-  before { get "/screencasts/#{ screencast.to_param }" }
+  before { get "/screencasts/#{ id }" }
 
-  it { is_expected.to be_successful }
+  context "when valid id given" do
+    let(:id) { screencast.to_param }
 
-  it "should include screencast" do
-    expect(subject.body).to include screencast.title
+    it { is_expected.to be_successful }
+
+    it "should include screencast" do
+      expect(subject.body).to include screencast.title
+    end
+  end
+
+  context "when invalid id given" do
+    let(:id) { "wrong" }
+
+    include_examples "a 'page not found' error page"
   end
 end

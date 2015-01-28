@@ -9,6 +9,7 @@ ru:
     avatar: Аватар
   pages:
     screencast_list: Скринкасты
+    not_found: Станица не найдена
   screencast_list_item:
     published: Опубликован
     watch: Посмотреть

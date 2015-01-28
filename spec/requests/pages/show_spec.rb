@@ -4,12 +4,22 @@ describe 'GET /:id' do
   subject { response }
 
   let!(:page) { create :page }
+  before { get "/#{ id }" }
 
-  before { get "/#{ page.to_param }" }
+  context "when valid id given" do
 
-  it { is_expected.to be_successful }
+    let(:id) { page.to_param }
 
-  it "should include page" do
-    expect(subject.body).to include page.title
+    it { is_expected.to be_successful }
+
+    it "should include page" do
+      expect(subject.body).to include page.title
+    end
+  end
+
+  context "when invalid id given" do
+    let(:id) { "wrong" }
+
+    include_examples "a 'page not found' error page"
   end
 end
