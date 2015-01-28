@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   end
 
   root to: "screencasts#index"
+
+  resources :pages, only: :show, path: ''
 end

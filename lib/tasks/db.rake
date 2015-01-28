@@ -4,6 +4,7 @@ namespace :db do
   task populate: :environment do
 
     Rake::Task['db:reset'].invoke
+    Rake::Task['pages:populate'].execute
     Rake::Task['screencasts:populate'].execute
 
   end
