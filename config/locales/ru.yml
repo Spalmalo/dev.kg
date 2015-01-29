@@ -17,6 +17,9 @@ ru:
     created: Привет, %{nickname}!
     destroyed: Вы вышли из системы.
   activerecord:
+    models:
+      screencast:
+        one: Скринкаст
     attributes:
       screencast:
         id: Идентификатор

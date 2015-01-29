@@ -21,6 +21,8 @@ gem 'newrelic_rpm'
 gem 'omniauth-github'
 gem 'warden', '~> 1.2.3'
 gem 'disqus_rails'
+gem 'formtastic'
+gem 'formtastic-bootstrap'
 
 group :production do
   gem 'rails_12factor'

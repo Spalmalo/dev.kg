@@ -7,7 +7,6 @@ describe 'GET /screencasts/new' do
     let!(:user) { create :user }
 
     before { login_as user }
-    after { logout }
 
     it { is_expected.to be_successful }
 
@@ -19,9 +18,7 @@ describe 'GET /screencasts/new' do
 
   context "when user is not signed in" do
 
-    it "should redirect to login page" do
-      expect(subject).to redirect_to '/sign_in'
-    end
+    it { is_expected.to redirect_to sign_in_path }
 
   end
 end

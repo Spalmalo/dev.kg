@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get '/sign_in', to: 'sessions#new'
   delete '/sign_out', to: 'sessions#destroy'
 
-  resources :screencasts, only: [:show, :new] do
+  resources :screencasts, only: [:show, :new, :create] do
     root to: redirect('/')
   end
 
