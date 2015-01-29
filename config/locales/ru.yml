@@ -3,6 +3,7 @@ ru:
     sitename: 'Spalmalo on Rails'
   pages:
     screencast_list: Скринкасты
+    screencast_new: Добавить скринкаст
     not_found: Станица не найдена
   screencast_list_item:
     published: Опубликован
