@@ -6,7 +6,8 @@ ru:
     screencast_new: Добавить скринкаст
     not_found: Станица не найдена
   screencast_list_item:
-    published: Опубликован
+    added: Добавлен
+    author: Автор
     watch: Посмотреть
   session:
     sign_in: Войти
@@ -24,3 +25,4 @@ ru:
         video_url: Ссылка на видео
         created_at: Создан
         updated_at: Обновлен
+        user: Автор

@@ -8,7 +8,7 @@
     <div class="col-sm-8">
       <%= link_to content_tag(:h2, screencast.title), screencast %>
 
-      <div class="published_at"><%= t("screencast_list_item.published") %> <time datetime="<%= screencast.created_at.to_s %>"><%= l screencast.created_at, format: :long %></time></div>
+      <div class="published_at"><%= t("screencast_list_item.added") %>: <time datetime="<%= screencast.created_at.to_s %>"><%= l screencast.created_at, format: :long %></time>; <%= t("screencast_list_item.author") %>: <%= screencast.user.nickname %></div>
 
       <%== screencast.description %>
 

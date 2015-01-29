@@ -26,12 +26,16 @@ namespace :screencasts do
       https://www.youtube.com/watch?v=JIYZarsE7NE
     ]
 
+    users = User.all
+
     video_urls.each_with_index do |video_url, index|
 
       Timecop.travel (video_urls.count - index).weeks.ago do
         Screencast.create!  title:        Faker::HipsterIpsum.sentence,
                             description:  "<p>#{ Faker::HipsterIpsum.paragraph }</p>",
-                            video_url:    video_url
+                            video_url:    video_url,
+                            user:         users.sample
+
 
       end
     end
