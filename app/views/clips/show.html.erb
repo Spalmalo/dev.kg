@@ -1,0 +1,13 @@
+<% provide :title, @clip.title %>
+
+<h1><%= @clip.title %></h1>
+
+<div class="thumbnail">
+  <div class="embed-responsive embed-responsive-16by9">
+    <%= youtube_embed @clip.video_url %>
+  </div>
+</div>
+
+<%== @clip.description %>
+
+<%- disqus_thread %>

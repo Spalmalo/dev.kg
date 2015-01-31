@@ -1,11 +1,9 @@
 require 'rails_helper'
 
 describe 'GET /' do
-  subject { response }
+  subject { get '/'; response }
 
   let!(:screencasts) { create_list :screencast, 3 }
-
-  before { get '/' }
 
   it { is_expected.to be_successful }
 

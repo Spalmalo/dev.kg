@@ -4,11 +4,17 @@ ru:
   pages:
     screencast_list: Скринкасты
     screencast_new: Добавить скринкаст
+    clip_list: Ролики
+    clip_new: Добавить ролик
     not_found: Станица не найдена
     access_denied: Доступ запрещен
   screencast_list_item:
     added: Добавлен
     author: Автор
+    watch: Посмотреть
+  clip_list_item:
+    added: Добавлен
+    author: Добавил(а)
     watch: Посмотреть
   screencast_show:
     delete: Удалить

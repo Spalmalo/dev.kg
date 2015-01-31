@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     root to: redirect('/')
   end
 
+  resources :clips, only: [:index, :show]
+
   root to: "screencasts#index"
 
   resources :pages, only: :show, path: ''
