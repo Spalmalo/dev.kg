@@ -1,6 +1,8 @@
-# Spalmalo on Rails
+# [/dev/kg](http://spalmalo-screencasts.herokuapp.com)
 
-Spalmalo education platform
+Kyrgyzstan IT community platform.
+
+![build status](https://travis-ci.org/Spalmalo/dev.kg.svg?branch=master)
 
 ## Setup
 
