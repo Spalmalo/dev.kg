@@ -10,7 +10,7 @@
 
       <div class="published_at"><%= t("clip_list_item.added") %>: <time datetime="<%= clip.created_at.to_s %>"><%= l clip.created_at, format: :long %></time>; <%= t("clip_list_item.author") %>: <%= clip.user.nickname %></div>
 
-      <%== clip.description %>
+      <p><%= clip.description %></p>
 
       <%= link_to [glyph(:film), t("clip_list_item.watch")].join(' ').html_safe, clip %>
     </div>

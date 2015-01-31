@@ -32,7 +32,7 @@ namespace :screencasts do
 
       Timecop.travel (video_urls.count - index).weeks.ago do
         Screencast.create!  title:        Faker::HipsterIpsum.sentence,
-                            description:  "<p>#{ Faker::HipsterIpsum.paragraph }</p>",
+                            description:  Faker::HipsterIpsum.paragraph,
                             video_url:    video_url,
                             user:         users.sample
 
