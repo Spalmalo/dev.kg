@@ -2,17 +2,17 @@
 
 <h1><%= @screencast.title %></h1>
 
+<div class="thumbnail">
+  <div class="embed-responsive embed-responsive-16by9">
+    <%= youtube_embed @screencast.video_url %>
+  </div>
+</div>
+
 <div class="panel panel-default">
   <div class="panel-body">
     <% if can? :destroy, @screencast %>
       <%= link_to [glyph('trash'), t("screencast_show.delete")].join(' ').html_safe, @screencast, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: t("confirm.are_you_sure") } %>
     <% end %>
-  </div>
-</div>
-
-<div class="thumbnail">
-  <div class="embed-responsive embed-responsive-16by9">
-    <%= youtube_embed @screencast.video_url %>
   </div>
 </div>
 

@@ -1,6 +1,6 @@
 class ClipsController < ApplicationController
 
-  before_action :authenticate!, only: [:new, :create]
+  before_action :authenticate!, only: [:new, :create, :destroy]
 
   load_and_authorize_resource
 
@@ -22,6 +22,11 @@ class ClipsController < ApplicationController
     else
       render :new, status: 422
     end
+  end
+
+  def destroy
+    @clip.destroy
+    redirect_to :clips, notice: t('clip_delete.notice')
   end
 
   private

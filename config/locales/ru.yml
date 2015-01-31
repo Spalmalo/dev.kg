@@ -12,14 +12,18 @@ ru:
     added: Добавлен
     author: Автор
     watch: Посмотреть
-  clip_list_item:
-    added: Добавлен
-    author: Добавил(а)
-    watch: Посмотреть
   screencast_show:
     delete: Удалить
   screencast_delete:
     notice: Скринкаст был удален
+  clip_list_item:
+    added: Добавлен
+    author: Добавил(а)
+    watch: Посмотреть
+  clip_show:
+    delete: Удалить
+  clip_delete:
+    notice: Ролик был удален
   confirm:
     are_you_sure: Вы уверены?
   access_denied:

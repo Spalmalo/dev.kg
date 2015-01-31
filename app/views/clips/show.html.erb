@@ -8,6 +8,14 @@
   </div>
 </div>
 
+<div class="panel panel-default">
+  <div class="panel-body">
+    <% if can? :destroy, @clip %>
+      <%= link_to [glyph('trash'), t("clip_show.delete")].join(' ').html_safe, @clip, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: t("confirm.are_you_sure") } %>
+    <% end %>
+  </div>
+</div>
+
 <%== @clip.description %>
 
 <%- disqus_thread %>
