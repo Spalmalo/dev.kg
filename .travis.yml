@@ -2,11 +2,13 @@ language: ruby
 cache:
   - apt
   - bundler
-bundler_args: --without production
+bundler_args: --without production --binstubs
 addons:
   postgresql: "9.3"
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database dev_kg_test;' -U postgres
 script:
-  - RAILS_ENV=test bundle exec rake --trace db:migrate test
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rspec spec/
