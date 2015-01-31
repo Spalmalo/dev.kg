@@ -1,0 +1,3 @@
+class Clip < Video
+
+end
