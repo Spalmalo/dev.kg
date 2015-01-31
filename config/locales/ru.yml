@@ -1,6 +1,6 @@
 ru:
   layout:
-    sitename: 'Spalmalo on Rails'
+    sitename: '/dev/kg'
   pages:
     screencast_list: Скринкасты
     screencast_new: Добавить скринкаст
