@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: dev_kg_test
+  username: postgres

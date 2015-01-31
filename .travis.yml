@@ -1,0 +1,12 @@
+language: ruby
+cache:
+  - apt
+  - bundler
+bundler_args: --without production
+addons:
+  postgresql: "9.3"
+before_script:
+  - cp config/database.yml.travis config/database.yml
+  - psql -c 'create database dev_kg_test;' -U postgres
+script:
+  - RAILS_ENV=test bundle exec rake --trace db:migrate test
