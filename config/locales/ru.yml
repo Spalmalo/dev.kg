@@ -37,8 +37,10 @@ ru:
     models:
       screencast:
         one: Скринкаст
+      clip:
+        one: Ролик
     attributes:
-      screencast:
+      video:
         id: Идентификатор
         title: Заголовок
         description: Описание

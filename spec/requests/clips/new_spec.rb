@@ -1,7 +1,7 @@
 require 'rails_helper'
 
-describe 'GET /screencasts/new' do
-  subject { get "/screencasts/new"; response }
+describe 'GET /clips/new' do
+  subject { get "/clips/new"; response }
 
   context "when user is signed in" do
     let!(:user) { create :user }
@@ -11,7 +11,6 @@ describe 'GET /screencasts/new' do
     it { is_expected.to be_successful }
 
     it { is_expected.to render_template 'new' }
-
   end
 
   context "when user is not signed in" do
