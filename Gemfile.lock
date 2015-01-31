@@ -58,6 +58,8 @@ GEM
       slop (~> 3.6)
     cancancan (1.10.1)
     chunky_png (1.3.3)
+    codeclimate-test-reporter (0.4.6)
+      simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -88,6 +90,7 @@ GEM
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     disqus_rails (0.0.6)
+    docile (1.1.5)
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
@@ -226,6 +229,11 @@ GEM
       tilt (~> 1.1)
     shoulda-matchers (2.7.0)
       activesupport (>= 3.0.0)
+    simplecov (0.9.1)
+      docile (~> 1.1.0)
+      multi_json (~> 1.0)
+      simplecov-html (~> 0.8.0)
+    simplecov-html (0.8.0)
     slop (3.6.0)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -263,6 +271,7 @@ DEPENDENCIES
   bootstrap-sass (~> 3.3.3)
   bootstrap-sass-extras
   cancancan (~> 1.10)
+  codeclimate-test-reporter
   coffee-rails (~> 4.1.0)
   compass-rails (~> 2.0.4)
   database_cleaner
