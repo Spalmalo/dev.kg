@@ -5,6 +5,7 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'shoulda/matchers'
 require "codeclimate-test-reporter"
+require "cancan/matchers"
 
 CodeClimate::TestReporter.start
 

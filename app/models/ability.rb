@@ -6,9 +6,9 @@ class Ability
 
     can :read, :all
 
-    can :create, Screencast if user.persisted?
-    can [:update, :destroy], Screencast do |screencast|
-      screencast.user == user
+    can :create, Video if user.persisted?
+    can [:update, :destroy], Video do |video|
+      video.user == user
     end
 
   end
