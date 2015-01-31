@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
   rescue_from ActiveRecord::RecordNotFound do |ex|
     render '404', status: 404
   end
+
+  rescue_from CanCan::AccessDenied do |ex|
+    render '403', status: 403
+  end
 end

@@ -1,21 +1,22 @@
 class ScreencastsController < ApplicationController
 
-  before_action :authenticate!, only: [:new, :create]
+  before_action :authenticate!, only: [:new, :create, :destroy]
+
+  load_and_authorize_resource
 
   def index
-    @screencasts = Screencast.index.page(params[:page]).per(10)
+    @screencasts = @screencasts.index.page(params[:page]).per(10)
   end
 
   def show
-    @screencast = Screencast.index.friendly.find params[:id]
   end
 
   def new
-    @screencast = Screencast.new
   end
 
   def create
-    @screencast = Screencast.new screencast_params.merge(user: current_user)
+    @screencast.user = current_user
+
     if @screencast.save
       redirect_to @screencast
     else
@@ -23,9 +24,14 @@ class ScreencastsController < ApplicationController
     end
   end
 
+  def destroy
+    @screencast.destroy
+    redirect_to :root, notice: t('screencast_delete.notice')
+  end
+
   private
 
-    def screencast_params
+    def create_params
       params.require(:screencast).permit  :title,
                                           :description,
                                           :video_url

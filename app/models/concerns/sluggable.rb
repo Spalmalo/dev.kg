@@ -3,7 +3,7 @@ module Sluggable
 
   included do
     extend FriendlyId
-    friendly_id :slug_candidates, use: :slugged
+    friendly_id :slug_candidates, use: [:slugged, :finders]
 
     def normalize_friendly_id(text)
       text.to_slug.normalize! transliterations: [:russian, :latin]

@@ -5,10 +5,21 @@ ru:
     screencast_list: Скринкасты
     screencast_new: Добавить скринкаст
     not_found: Станица не найдена
+    access_denied: Доступ запрещен
   screencast_list_item:
     added: Добавлен
     author: Автор
     watch: Посмотреть
+  screencast_show:
+    delete: Удалить
+  screencast_delete:
+    notice: Скринкаст был удален
+  confirm:
+    are_you_sure: Вы уверены?
+  access_denied:
+    description: Доступ к запрашиваемому ресурсу запрещен.
+  not_found:
+    description: Запрашиваемая Вами страница не найдена.
   session:
     sign_in: Войти
     sign_out: Выйти

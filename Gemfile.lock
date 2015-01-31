@@ -56,6 +56,7 @@ GEM
       columnize (~> 0.8)
       debugger-linecache (~> 1.2)
       slop (~> 3.6)
+    cancancan (1.10.1)
     chunky_png (1.3.3)
     coderay (1.1.0)
     coffee-rails (4.1.0)
@@ -261,6 +262,7 @@ DEPENDENCIES
   bootstrap-kaminari-views
   bootstrap-sass (~> 3.3.3)
   bootstrap-sass-extras
+  cancancan (~> 1.10)
   coffee-rails (~> 4.1.0)
   compass-rails (~> 2.0.4)
   database_cleaner

@@ -23,6 +23,7 @@ gem 'warden', '~> 1.2.3'
 gem 'disqus_rails'
 gem 'formtastic'
 gem 'formtastic-bootstrap'
+gem 'cancancan', '~> 1.10'
 
 group :production do
   gem 'rails_12factor'
