@@ -1,4 +1,4 @@
-# [/dev/kg](http://spalmalo-screencasts.herokuapp.com)
+# [/dev/kg](http://dev-kg.herokuapp.com)
 
 Kyrgyzstan IT community platform.
 
