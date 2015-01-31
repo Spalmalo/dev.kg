@@ -37,7 +37,7 @@ Run web-server:
 
 ## Deploy
 
-TODO: Add deploy notes
+Heroku is configured to watch this repo. It will wait for Travis CI tests and deploy app automatically.
 
 ## Contributing
 
