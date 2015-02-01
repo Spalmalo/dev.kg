@@ -18,4 +18,13 @@
 
 <p><%= @screencast.description %></p>
 
+<% if @screencast.references.any? %>
+  <div class="well">
+    <%= Reference.model_name.human count: 10 %>:
+    <ol>
+      <%= render @screencast.references %>
+    </ol>
+  </div>
+<% end %>
+
 <%- disqus_thread %>
