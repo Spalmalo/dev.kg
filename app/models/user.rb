@@ -6,4 +6,7 @@ class User < ActiveRecord::Base
 
   has_many :screencasts, dependent: :destroy, inverse_of: :user
 
+  has_many :likes,    dependent: :destroy
+  has_many :dislikes, dependent: :destroy
+
 end

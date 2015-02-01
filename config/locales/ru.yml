@@ -70,3 +70,12 @@ ru:
       reference:
         title: Заголовок
         url: Ссылка
+      impression:
+        user: Автор
+        video: Видео
+    errors:
+      models:
+        like:
+          attributes:
+            user:
+              cannot_have_impression_on_own_videos: не может лайкать собственные видео

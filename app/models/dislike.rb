@@ -1,0 +1,2 @@
+class Dislike < Impression
+end

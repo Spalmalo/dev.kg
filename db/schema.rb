@@ -11,10 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150201055859) do
+ActiveRecord::Schema.define(version: 20150201115023) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "impressions", force: :cascade do |t|
+    t.integer  "video_id"
+    t.integer  "user_id"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "impressions", ["type"], name: "index_impressions_on_type", using: :btree
+  add_index "impressions", ["user_id", "video_id"], name: "index_impressions_on_user_id_and_video_id", unique: true, using: :btree
+  add_index "impressions", ["user_id"], name: "index_impressions_on_user_id", using: :btree
+  add_index "impressions", ["video_id"], name: "index_impressions_on_video_id", using: :btree
 
   create_table "pages", force: :cascade do |t|
     t.string   "slug"
@@ -65,6 +78,8 @@ ActiveRecord::Schema.define(version: 20150201055859) do
   add_index "videos", ["user_id"], name: "index_videos_on_user_id", using: :btree
   add_index "videos", ["video_url"], name: "index_videos_on_video_url", unique: true, using: :btree
 
+  add_foreign_key "impressions", "users"
+  add_foreign_key "impressions", "videos"
   add_foreign_key "references", "videos"
   add_foreign_key "videos", "users"
 end

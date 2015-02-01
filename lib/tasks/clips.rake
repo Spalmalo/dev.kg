@@ -20,8 +20,6 @@ namespace :clips do
                       description:  Faker::HipsterIpsum.paragraph,
                       video_url:    video_url,
                       user:         users.sample
-
-
       end
     end
 
