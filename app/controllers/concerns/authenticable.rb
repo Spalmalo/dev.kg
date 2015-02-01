@@ -2,6 +2,7 @@ module Authenticable
   extend ActiveSupport::Concern
 
   included do
+    before_action :remember_requested_path, if: proc { request.get? }
     helper_method :warden, :signed_in?, :current_user
   end
 
@@ -18,8 +19,11 @@ module Authenticable
   end
 
   def authenticate!
-    session[:requested_path] = request.path if request.get?
     warden.authenticate!
+  end
+
+  def remember_requested_path
+    session[:requested_path] = request.path
   end
 
 end

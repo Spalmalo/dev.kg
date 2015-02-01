@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
 
+  skip_before_action :remember_requested_path
+
   def new
   end
 
