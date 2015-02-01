@@ -10,8 +10,8 @@ describe Video, type: :model do
   it { is_expected.not_to allow_value("http://google.com").for(:video_url) }
   it { is_expected.to allow_value("https://www.youtube.com/watch?v=qpgT_62y5kQ").for(:video_url) }
 
-  it { is_expected.to ensure_length_of(:title).is_at_most(255) }
-  it { is_expected.to ensure_length_of(:description).is_at_most(400) }
+  it { is_expected.to validate_length_of(:title).is_at_most(255) }
+  it { is_expected.to validate_length_of(:description).is_at_most(400) }
 
   it { is_expected.to validate_uniqueness_of :video_url }
 
