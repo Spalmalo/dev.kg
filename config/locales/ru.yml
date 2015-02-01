@@ -7,6 +7,7 @@ ru:
     screencast_edit: Редактирование %{title}
     clip_list: Ролики
     clip_new: Добавить ролик
+    clip_edit: Редактирование %{title}
     not_found: Станица не найдена
     access_denied: Доступ запрещен
   screencast_list_item:
@@ -30,8 +31,11 @@ ru:
     watch: Посмотреть
   clip_show:
     delete: Удалить
+    edit: Редактировать
   clip_delete:
     notice: Ролик был удален
+  clip_update:
+    notice: Ролик был успешно обновлен
   confirm:
     are_you_sure: Вы уверены?
   access_denied:

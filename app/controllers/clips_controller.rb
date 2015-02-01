@@ -1,6 +1,6 @@
 class ClipsController < ApplicationController
 
-  before_action :authenticate!, only: [:new, :create, :destroy]
+  before_action :authenticate!, except: [:show, :index]
 
   load_and_authorize_resource
 
@@ -29,9 +29,20 @@ class ClipsController < ApplicationController
     redirect_to :clips, notice: t('clip_delete.notice')
   end
 
+  def edit
+  end
+
+  def update
+    if @clip.update clip_params
+      redirect_to @clip, notice: t('clip_update.notice')
+    else
+      render :edit, status: 422
+    end
+  end
+
   private
 
-    def create_params
+    def clip_params
       params.require(:clip).permit  :title,
                                     :description,
                                     :video_url

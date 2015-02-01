@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     root to: redirect('/')
   end
 
-  resources :clips, except: [:edit, :update]
+  resources :clips
 
   root to: "screencasts#index"
 
