@@ -6,7 +6,11 @@ class User < ActiveRecord::Base
 
   has_many :screencasts, dependent: :destroy, inverse_of: :user
 
-  has_many :likes,    dependent: :destroy
-  has_many :dislikes, dependent: :destroy
+  has_many :impressions, dependent: :destroy
+  has_many :likes
+  has_many :dislikes
 
+  def has_impression_on? video
+    impressions.where(video: video).any?
+  end
 end
