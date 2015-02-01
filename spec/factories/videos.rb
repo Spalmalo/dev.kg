@@ -14,7 +14,7 @@ FactoryGirl.define do
       type "Clip"
     end
 
-    factory :screencast,  traits: [:screencast]
-    factory :clip,        traits: [:clip]
+    factory :screencast,  class: Screencast,  traits: [:screencast]
+    factory :clip,        class: Clip,        traits: [:clip]
   end
 end

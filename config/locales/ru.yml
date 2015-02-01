@@ -4,6 +4,7 @@ ru:
   pages:
     screencast_list: Скринкасты
     screencast_new: Добавить скринкаст
+    screencast_edit: Редактирование %{title}
     clip_list: Ролики
     clip_new: Добавить ролик
     not_found: Станица не найдена
@@ -14,8 +15,15 @@ ru:
     watch: Посмотреть
   screencast_show:
     delete: Удалить
+    edit: Редактировать
   screencast_delete:
     notice: Скринкаст был удален
+  screencast_update:
+    notice: Скринкаст был успешно обновлен
+  screencast_form:
+    references: Ссылки
+    add_reference: Добавить ссылку
+    remove_reference: Удалить ссылку
   clip_list_item:
     added: Добавлен
     author: Добавил(а)

@@ -16,4 +16,5 @@
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
 //= require disqus_rails
+//= require cocoon
 //= require_tree ./application
