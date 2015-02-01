@@ -8,4 +8,6 @@ class Video < ActiveRecord::Base
   validates_uniqueness_of :video_url
 
   belongs_to :user
+
+  has_many :references, dependent: :destroy, inverse_of: :video
 end

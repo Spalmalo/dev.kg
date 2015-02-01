@@ -43,6 +43,9 @@ ru:
         one: Скринкаст
       clip:
         one: Ролик
+      reference:
+        one: Ссылка
+        many: Ссылки
     attributes:
       video:
         id: Идентификатор
@@ -52,3 +55,6 @@ ru:
         created_at: Создан
         updated_at: Обновлен
         user: Автор
+      reference:
+        title: Заголовок
+        url: Ссылка
