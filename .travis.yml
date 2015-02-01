@@ -2,11 +2,11 @@ language: ruby
 cache:
   - apt
   - bundler
-bundler_args: --without production --binstubs
+bundler_args: "--without production --binstubs"
 env:
   - RAILS_ENV=test CODECLIMATE_REPO_TOKEN=12c0eb766b5b8906cfa609dabe9d41070f4bf83242dd6aa0a3b68a24516f6589
 addons:
-  postgresql: "9.3"
+  postgresql: '9.3'
 before_script:
   - cp config/database.yml.travis config/database.yml
   - psql -c 'create database dev_kg_test;' -U postgres
@@ -14,3 +14,9 @@ script:
   - bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
+deploy:
+  provider: heroku
+  api_key:
+    secure: Tg43xdnH35LQGefy6z5rCnyvSJs6tAJxLCbxGhBgnasm3y6T9bSNNsT3tYjrRdhOKnc6gqqzTUs0RwmVuNzk+fpajNBw7nwdJ3lBwlWc2CdHSggBHIsodzNOrBAmNClYHO7RKC2aFYb5oRLWHkrtuPFJC7Yk3YKlDfCSKuNO9gA=
+  app: dev-kg
+  run: "rake db:migrate"
