@@ -12,4 +12,8 @@ class Video < ActiveRecord::Base
   has_many :references,   dependent: :destroy, inverse_of: :video
   has_many :likes,        dependent: :destroy
   has_many :dislikes,     dependent: :destroy
+
+  def rating
+    likes_count - dislikes_count
+  end
 end
