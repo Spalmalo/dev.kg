@@ -4,7 +4,6 @@ Kyrgyzstan IT community platform.
 
 ![build status](https://travis-ci.org/Spalmalo/dev.kg.svg?branch=master)
 [![Code Climate](https://codeclimate.com/github/Spalmalo/dev.kg/badges/gpa.svg)](https://codeclimate.com/github/Spalmalo/dev.kg)
-[![Test Coverage](https://codeclimate.com/github/Spalmalo/dev.kg/badges/coverage.svg)](https://codeclimate.com/github/Spalmalo/dev.kg)
 [![Dependencies status](https://gemnasium.com/Spalmalo/dev.kg.png)](https://gemnasium.com/Spalmalo/dev.kg)
 ## Setup
 
