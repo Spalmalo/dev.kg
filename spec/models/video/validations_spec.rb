@@ -13,6 +13,8 @@ describe Video, type: :model do
   it { is_expected.to ensure_length_of(:title).is_at_most(255) }
   it { is_expected.to ensure_length_of(:description).is_at_most(400) }
 
+  it { is_expected.to validate_uniqueness_of :video_url }
+
   it "should have valid vactory" do
     screencast = build(:screencast)
     expect(screencast).to be_valid

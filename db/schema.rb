@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150131101631) do
+ActiveRecord::Schema.define(version: 20150201055253) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150131101631) do
   add_index "videos", ["slug"], name: "index_videos_on_slug", unique: true, using: :btree
   add_index "videos", ["type"], name: "index_videos_on_type", using: :btree
   add_index "videos", ["user_id"], name: "index_videos_on_user_id", using: :btree
+  add_index "videos", ["video_url"], name: "index_videos_on_video_url", unique: true, using: :btree
 
   add_foreign_key "videos", "users"
 end
