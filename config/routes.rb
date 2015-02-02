@@ -1,14 +1,18 @@
 Rails.application.routes.draw do
 
-  get '/auth/:provider/callback', to: 'sessions#create'
-  get '/sign_in', to: 'sessions#new'
-  delete '/sign_out', to: 'sessions#destroy'
+  get     '/auth/:provider/callback', to: 'sessions#create'
+  get     '/sign_in',   to: 'sessions#new'
+  delete  '/sign_out',  to: 'sessions#destroy'
 
-  resources :screencasts, except: [:index] do
-    root to: redirect('/')
+  concern :impressionable do
+    post :like,     to: 'impressionable#like',    as: :likes
+    post :dislike,  to: 'impressionable#dislike', as: :dislikes
   end
 
-  resources :clips
+  get '/screencasts',     to: redirect('/')
+
+  resources :screencasts, concerns: :impressionable, except: [:index]
+  resources :clips,       concerns: :impressionable
 
   root to: "screencasts#index"
 

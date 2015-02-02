@@ -1,0 +1,8 @@
+<div class="impressions-group" role="group">
+  <%= button_to [impressionable, Like.new], remote: signed_in?, class: 'btn btn-success btn-xs' do %>
+    <%= glyph('thumbs-up') %>
+  <% end %>
+  <%= button_to [impressionable, Dislike.new], remote: signed_in?, class: 'btn btn-danger btn-xs' do %>
+    <%= glyph('thumbs-down') %>
+  <% end %>
+</div>

@@ -1,0 +1,7 @@
+<div id="rating">
+  <% if signed_in? and (impressionable.user == current_user or current_user.has_impression_on? impressionable) %>
+    <%= render 'impressionable/rating_value', impressionable: impressionable %>
+  <% else %>
+    <%= render 'impressionable/controls', impressionable: impressionable %>
+  <% end %>
+</div>

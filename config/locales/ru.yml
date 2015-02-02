@@ -36,6 +36,8 @@ ru:
     notice: Ролик был удален
   clip_update:
     notice: Ролик был успешно обновлен
+  impressionable:
+    rating: Рейтинг
   confirm:
     are_you_sure: Вы уверены?
   access_denied:
