@@ -28,6 +28,7 @@ gem 'cocoon'
 
 group :production do
   gem 'rails_12factor'
+  gem 'sentry-raven', :require => 'raven'
 end
 
 group :development do

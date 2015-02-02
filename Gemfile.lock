@@ -229,6 +229,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    sentry-raven (0.12.3)
+      faraday (>= 0.7.6)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
     simplecov (0.9.1)
@@ -297,6 +299,7 @@ DEPENDENCIES
   rspec-rails
   russian
   sass-rails (~> 5.0)
+  sentry-raven
   shoulda-matchers
   spring
   timecop
