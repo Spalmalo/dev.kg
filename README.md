@@ -37,7 +37,7 @@ Run web-server:
 
 ## Deploy
 
-Heroku is configured to watch this repo. It will wait for Travis CI tests and deploy app automatically.
+Project is hosted on [heroku](https://heroku.com). [Travis CI](https://travis-ci.org/Spalmalo/dev.kg) is configured to deploy code automatically on successful build(database migrations included).
 
 ## Contributing
 
