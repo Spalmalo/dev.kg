@@ -10,6 +10,7 @@ class Video < ActiveRecord::Base
   belongs_to :user
 
   has_many :references,   dependent: :destroy, inverse_of: :video
+  has_many :snippets,     dependent: :destroy, inverse_of: :video
   has_many :likes,        dependent: :destroy
   has_many :dislikes,     dependent: :destroy
 
