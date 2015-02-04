@@ -5,7 +5,7 @@ class ScreencastsController < ApplicationController
   load_and_authorize_resource
 
   def index
-    @screencasts = @screencasts.index.page(params[:page]).per(10)
+    @screencasts = @screencasts.index.includes(:user).page(params[:page]).per(10)
   end
 
   def show
