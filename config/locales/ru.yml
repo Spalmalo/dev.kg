@@ -67,6 +67,9 @@ ru:
       reference:
         one: Ссылка
         many: Ссылки
+      snippet:
+        one: Код
+        many: Код
     attributes:
       video:
         id: Идентификатор
@@ -79,6 +82,10 @@ ru:
       reference:
         title: Заголовок
         url: Ссылка
+      snippet:
+        description: Описание
+        language: Язык
+        code: Код
       impression:
         user: Автор
         video: Видео
