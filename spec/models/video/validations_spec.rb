@@ -14,6 +14,7 @@ describe Video, type: :model do
   it { is_expected.to validate_length_of(:description).is_at_most(400) }
 
   it { is_expected.to validate_uniqueness_of :video_url }
+  it { is_expected.to have_readonly_attribute :video_url }
 
   it "should have valid vactory" do
     screencast = build(:screencast)

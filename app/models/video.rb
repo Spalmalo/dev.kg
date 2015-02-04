@@ -14,6 +14,8 @@ class Video < ActiveRecord::Base
   has_many :likes,        dependent: :destroy
   has_many :dislikes,     dependent: :destroy
 
+  attr_readonly :video_url
+
   def rating
     likes_count - dislikes_count
   end
