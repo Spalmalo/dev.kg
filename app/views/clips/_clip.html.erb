@@ -8,7 +8,7 @@
     <div class="col-sm-8">
       <%= link_to content_tag(:h2, clip.title), clip %>
 
-      <div class="published_at"><%= t("clip_list_item.added") %>: <time datetime="<%= clip.created_at.to_s %>"><%= l clip.created_at, format: :long %></time>; <%= t("clip_list_item.author") %>: <%= clip.user.nickname %></div>
+      <div class="published_at"><%= t("clip_list_item.added") %>: <time datetime="<%= clip.created_at.to_s %>"><%= l clip.created_at, format: :long %></time>; <%= t("clip_list_item.author") %>: <%= render clip.user %></div>
 
       <p><%= clip.description %></p>
 

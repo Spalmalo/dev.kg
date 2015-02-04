@@ -1,0 +1,29 @@
+@mixin video_item {
+  margin-bottom: 40px;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  .published_at {
+    font-style: italic;
+    margin-bottom: 10px;
+  }
+
+  .thumbnail {
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@mixin video_show {
+  #rating, .author {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  #rating {
+    margin-right: 10px;
+  }
+}

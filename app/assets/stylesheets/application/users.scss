@@ -1,0 +1,8 @@
+.user {
+  img {
+    height: 30px;
+    width: 30px;
+    margin: -6px 6px -6px 0;
+    @include border-radius(3px);
+  }
+}

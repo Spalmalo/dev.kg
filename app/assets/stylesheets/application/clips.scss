@@ -1,18 +1,7 @@
 .clip_item {
-  margin-bottom: 40px;
+  @include video_item;
+}
 
-  h2 {
-    margin-top: 0;
-  }
-
-  .published_at {
-    font-style: italic;
-    margin-bottom: 10px;
-  }
-
-  .thumbnail {
-    img {
-      width: 100%;
-    }
-  }
+#clip {
+  @include video_show;
 }
