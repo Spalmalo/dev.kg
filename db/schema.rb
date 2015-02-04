@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150203163728) do
+ActiveRecord::Schema.define(version: 20150204165058) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "asciicasts", force: :cascade do |t|
+    t.integer  "video_id"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "asciicasts", ["video_id"], name: "index_asciicasts_on_video_id", using: :btree
 
   create_table "impressions", force: :cascade do |t|
     t.integer  "video_id"
@@ -91,6 +100,7 @@ ActiveRecord::Schema.define(version: 20150203163728) do
   add_index "videos", ["user_id"], name: "index_videos_on_user_id", using: :btree
   add_index "videos", ["video_url"], name: "index_videos_on_video_url", unique: true, using: :btree
 
+  add_foreign_key "asciicasts", "videos"
   add_foreign_key "impressions", "users"
   add_foreign_key "impressions", "videos"
   add_foreign_key "references", "videos"

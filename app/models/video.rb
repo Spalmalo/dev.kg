@@ -11,6 +11,7 @@ class Video < ActiveRecord::Base
 
   has_many :references,   dependent: :destroy, inverse_of: :video
   has_many :snippets,     dependent: :destroy, inverse_of: :video
+  has_one  :asciicast,    dependent: :destroy
   has_many :likes,        dependent: :destroy
   has_many :dislikes,     dependent: :destroy
 
