@@ -1,0 +1,29 @@
+.snippet_item {
+  margin-bottom: 20px;
+
+  h4 {
+    margin-bottom: 0;
+    color: #aaa;
+    background-color: black;
+    padding: 0 5px;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+
+  pre {
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    @include border-bottom-left-radius(5px);
+    @include border-bottom-right-radius(5px);
+    overflow: hidden;
+  }
+
+  .level:first-child {
+    @include border-top-left-radius(5px);
+    @include border-top-right-radius(5px);
+  }
+}

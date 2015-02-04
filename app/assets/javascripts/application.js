@@ -15,6 +15,8 @@
 //= require bootstrap/alert
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
+//= require bootstrap/tab
 //= require disqus_rails
 //= require cocoon
+//= require highlight.pack
 //= require_tree ./application

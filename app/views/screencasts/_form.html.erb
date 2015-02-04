@@ -16,6 +16,17 @@
       </div>
     </div>
 
+    <div class="well">
+      <h3><%= t('screencast_form.snippets') %></h3>
+      <%= f.semantic_fields_for :snippets do |snippet| %>
+        <%= render 'snippet_fields', f: snippet %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association t('screencast_form.add_snippet'), f, :snippets %>
+      </div>
+    </div>
+
   <% end %>
 
   <%= f.actions do %>

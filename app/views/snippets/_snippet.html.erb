@@ -1,0 +1,4 @@
+<div class="snippet_item">
+  <%= content_tag :h4, snippet.description, class: "level" unless snippet.description.blank? %>
+  <pre class="level"><%= content_tag :code, snippet.code, class: snippet.language %></pre>
+</div>
