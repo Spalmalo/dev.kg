@@ -51,6 +51,8 @@ GEM
       sass (>= 3.2.19)
     bootstrap-sass-extras (0.0.6)
       rails (>= 3.1.0)
+    bootswatch-rails (3.2.4)
+      railties (>= 3.1)
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -274,6 +276,7 @@ DEPENDENCIES
   bootstrap-kaminari-views
   bootstrap-sass (~> 3.3.3)
   bootstrap-sass-extras
+  bootswatch-rails
   cancancan (~> 1.10)
   cocoon
   codeclimate-test-reporter
