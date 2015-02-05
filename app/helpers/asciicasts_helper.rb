@@ -7,6 +7,6 @@ module AsciicastsHelper
   private
 
     def markdown
-      Redcarpet::Markdown.new(Redcarpet::Render::HTML, extensions = {})
+      Redcarpet::Markdown.new(HtmlWithHljs, fenced_code_blocks: true)
     end
 end
