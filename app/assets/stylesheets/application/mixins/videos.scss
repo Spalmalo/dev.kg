@@ -18,6 +18,8 @@
 }
 
 @mixin video_show {
+  margin-bottom: 40px;
+
   #rating, .author {
     display: inline-block;
     vertical-align: top;
@@ -25,5 +27,11 @@
 
   #rating {
     margin-right: 10px;
+  }
+}
+
+@mixin video_form {
+  textarea {
+    max-width: 100%;
   }
 }

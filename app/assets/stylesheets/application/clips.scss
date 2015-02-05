@@ -5,3 +5,7 @@
 #clip {
   @include video_show;
 }
+
+form.clip {
+  @include video_form;
+}

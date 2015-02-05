@@ -4,6 +4,8 @@ class ScreencastsController < ApplicationController
 
   load_and_authorize_resource
 
+  before_action :build_asciicast, only: [:new, :edit]
+
   def index
     @screencasts = @screencasts.index.includes(:user).page(params[:page]).per(10)
   end
@@ -20,6 +22,7 @@ class ScreencastsController < ApplicationController
     if @screencast.save
       redirect_to @screencast
     else
+      build_asciicast
       render :new, status: 422
     end
   end
@@ -36,6 +39,7 @@ class ScreencastsController < ApplicationController
     if @screencast.update screencast_params
       redirect_to @screencast, notice: t('screencast_update.notice')
     else
+      build_asciicast
       render :edit, status: 422
     end
   end
@@ -46,8 +50,13 @@ class ScreencastsController < ApplicationController
       params.require(:screencast).permit  :title,
                                           :description,
                                           :video_url,
-                                          references_attributes: [:title, :url, :_destroy, :id],
-                                          snippets_attributes: [:description, :code, :language, :_destroy, :id]
+                                          references_attributes:  [:title, :url, :_destroy, :id],
+                                          snippets_attributes:    [:description, :code, :language, :_destroy, :id],
+                                          asciicast_attributes:   [:content, :_destroy, :id]
+    end
+
+    def build_asciicast
+      @screencast.build_asciicast unless @screencast.asciicast.present?
     end
 
 end

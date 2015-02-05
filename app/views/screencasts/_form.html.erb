@@ -2,8 +2,9 @@
 
   <%= f.inputs do %>
     <%= f.input :title %>
-    <%= f.input :description %>
+    <%= f.input :description, input_html: { rows: 4 } %>
     <%= f.input :video_url, input_html: { disabled: @screencast.persisted? } %>
+
 
     <div class="well">
       <h3><%= t('screencast_form.references') %></h3>
@@ -25,6 +26,13 @@
       <div class="links">
         <%= link_to_add_association t('screencast_form.add_snippet'), f, :snippets %>
       </div>
+    </div>
+
+    <div class="well">
+      <h3><%= t('screencast_form.asciicast') %></h3>
+      <%= f.semantic_fields_for :asciicast do |asciicast| %>
+        <%= render 'asciicast_fields', f: asciicast %>
+      <% end %>
     </div>
 
   <% end %>

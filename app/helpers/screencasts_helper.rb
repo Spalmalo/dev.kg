@@ -21,6 +21,7 @@ module ScreencastsHelper
       tabs = []
       tabs << { type: 'snippets',   title: t("screencast_show.tabs.snippets"),    content: Proc.new { render(@screencast.snippets) } } if @screencast.snippets.any?
       tabs << { type: 'references', title: t("screencast_show.tabs.references"),  content: Proc.new { content_tag :ol do; render(@screencast.references) ; end } } if @screencast.references.any?
+      tabs << { type: 'asciicast',  title: t("screencast_show.tabs.asciicast"),   content: Proc.new { render(@screencast.asciicast) } } if @screencast.asciicast.present?
       tabs << { type: 'comments',   title: t("screencast_show.tabs.comments"),    content: Proc.new { disqus_thread(@screencast.id, @screencast.title) } }
       tabs.first[:class] = 'active'
       tabs

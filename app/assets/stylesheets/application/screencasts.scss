@@ -5,3 +5,7 @@
 #screencast {
   @include video_show;
 }
+
+form.screencast {
+  @include video_form;
+}
