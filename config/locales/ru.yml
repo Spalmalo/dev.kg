@@ -22,6 +22,7 @@ ru:
       references: Ссылки
       snippets: Код
       comments: Коментарии
+      asciicast: ASCIIcast
   screencast_delete:
     notice: Скринкаст был удален
   screencast_update:
@@ -33,8 +34,8 @@ ru:
     snippets: Код
     add_snippet: Добавить код
     remove_snippet: Удалить код
-    asciicast: Asciicast
-    remove_asciicast: Удалить asciicast
+    asciicast: ASCIIcast
+    remove_asciicast: Удалить ASCIIcast
   clip_list_item:
     added: Добавлен
     author: Добавил(а)
@@ -94,7 +95,7 @@ ru:
         user: Автор
         video: Видео
       asciicast:
-        content: Текст
+        content: Текст(markdown)
     errors:
       models:
         like:

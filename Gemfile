@@ -26,6 +26,7 @@ gem 'formtastic-bootstrap'
 gem 'cancancan', '~> 1.10'
 gem 'cocoon'
 gem 'bootswatch-rails'
+gem 'redcarpet'
 
 group :production do
   gem 'rails_12factor'

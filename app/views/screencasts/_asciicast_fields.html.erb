@@ -1,4 +1,4 @@
 <%= f.inputs do %>
-  <%= f.input :content %>
+  <%= f.input :content, hint: link_to('Markdown cheatsheet', 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet', target: '_blank') %>
   <%= link_to_remove_association t('screencast_form.remove_asciicast'), f, wrapper_class: 'inputs' %>
 <% end %>
