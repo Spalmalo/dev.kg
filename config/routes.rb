@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :flags, only: :index
+
   get     '/auth/:provider/callback', to: 'sessions#create'
   get     '/sign_in',   to: 'sessions#new'
   delete  '/sign_out',  to: 'sessions#destroy'

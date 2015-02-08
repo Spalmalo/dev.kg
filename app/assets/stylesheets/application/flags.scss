@@ -1,0 +1,7 @@
+#flags {
+  @include column-count(2);
+
+  li {
+    margin-bottom: 4px;
+  }
+}
