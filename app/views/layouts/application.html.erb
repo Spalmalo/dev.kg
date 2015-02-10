@@ -39,5 +39,7 @@
     </div>
 
     <%= render 'shared/footer' %>
+
+    <%= javascript_include_tag 'trackers' if Rails.env.production? %>
   </body>
 </html>
