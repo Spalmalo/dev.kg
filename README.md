@@ -1,4 +1,4 @@
-# [/dev/kg](http://dev-kg.herokuapp.com)
+# [/dev/kg](http://www.dev.kg)
 
 Kyrgyzstan IT community platform.
 
