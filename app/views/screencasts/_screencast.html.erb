@@ -10,7 +10,7 @@
 
       <div class="published_at"><%= t("screencast_list_item.added") %>: <time datetime="<%= screencast.created_at.to_s %>"><%= l screencast.created_at, format: :long %></time>; <%= t("screencast_list_item.author") %>: <%= render screencast.user %></div>
 
-      <p><%= screencast.description %></p>
+      <p class="description"><%= screencast.description.truncate 200 %></p>
 
       <%= link_to [glyph(:film), t("screencast_list_item.watch")].join(' ').html_safe, screencast %>
     </div>

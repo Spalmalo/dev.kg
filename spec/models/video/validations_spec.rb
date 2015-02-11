@@ -11,7 +11,7 @@ describe Video, type: :model do
   it { is_expected.to allow_value("https://www.youtube.com/watch?v=qpgT_62y5kQ").for(:video_url) }
 
   it { is_expected.to validate_length_of(:title).is_at_most(255) }
-  it { is_expected.to validate_length_of(:description).is_at_most(400) }
+  it { is_expected.to validate_length_of(:description).is_at_most(4000) }
 
   it { is_expected.to validate_uniqueness_of :video_url }
   it { is_expected.to have_readonly_attribute :video_url }

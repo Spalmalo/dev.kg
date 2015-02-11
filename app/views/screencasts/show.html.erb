@@ -11,10 +11,10 @@
 
   <div class="panel panel-default">
     <div class="panel-body">
-      <!-- <div class="pull-left"> -->
-      <%= render '/impressionable/rating', impressionable: @screencast %>
-      <span class="author"><%= t "screencast_show.author" %>: <%= render @screencast.user %></span>
-      <!-- </div> -->
+      <div class="pull-left">
+        <%= render '/impressionable/rating', impressionable: @screencast %>
+        <span class="author"><%= t "screencast_show.author" %>: <%= render @screencast.user %></span>
+      </div>
       <div class="pull-right">
         <% if can? :edit, @screencast %>
           <%= link_to [glyph('edit'), t("screencast_show.edit")].join(' ').html_safe, edit_screencast_path(@screencast), class: "btn btn-default btn-xs" %>
@@ -28,7 +28,7 @@
   </div>
 
   <div class="well">
-    <p><%= @screencast.description %></p>
+    <p class="description"><%= @screencast.description %></p>
   </div>
 
   <%= screencast_tabs @screencast %>

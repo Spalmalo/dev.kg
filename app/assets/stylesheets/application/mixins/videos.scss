@@ -15,6 +15,11 @@
       width: 100%;
     }
   }
+
+  .description {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
 }
 
 @mixin video_show {
@@ -27,6 +32,11 @@
 
   #rating {
     margin-right: 10px;
+  }
+
+  .description {
+    white-space: pre-wrap;
+    word-wrap: break-word;
   }
 }
 
