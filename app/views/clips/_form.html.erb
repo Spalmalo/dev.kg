@@ -4,6 +4,18 @@
     <%= f.input :title %>
     <%= f.input :description, input_html: { rows: 4 }  %>
     <%= f.input :video_url, input_html: { disabled: @clip.persisted? } %>
+
+    <div class="well">
+      <h3><%= t('clip_form.references') %></h3>
+      <%= f.semantic_fields_for :references do |reference| %>
+        <%= render 'reference_fields', f: reference %>
+      <% end %>
+
+      <div class="links">
+        <%= link_to_add_association t('clip_form.add_reference'), f, :references %>
+      </div>
+    </div>
+
   <% end %>
 
   <%= f.actions do %>

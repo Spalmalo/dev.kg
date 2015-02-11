@@ -45,7 +45,8 @@ class ClipsController < ApplicationController
     def clip_params
       params.require(:clip).permit  :title,
                                     :description,
-                                    :video_url
+                                    :video_url,
+                                    references_attributes:  [:title, :url, :_destroy, :id]
     end
 
 end

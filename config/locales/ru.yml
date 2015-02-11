@@ -10,6 +10,11 @@ ru:
     clip_edit: Редактирование %{title}
     not_found: Станица не найдена
     access_denied: Доступ запрещен
+  video_tabs:
+    references: Ссылки
+    snippets: Код
+    comments: Коментарии
+    asciicast: ASCIIcast
   screencast_list_item:
     added: Добавлен
     author: Автор
@@ -18,11 +23,6 @@ ru:
     delete: Удалить
     edit: Редактировать
     author: Автор
-    tabs:
-      references: Ссылки
-      snippets: Код
-      comments: Коментарии
-      asciicast: ASCIIcast
   screencast_delete:
     notice: Скринкаст был удален
   screencast_update:
@@ -48,6 +48,10 @@ ru:
     notice: Ролик был удален
   clip_update:
     notice: Ролик был успешно обновлен
+  clip_form:
+    references: Ссылки
+    add_reference: Добавить ссылку
+    remove_reference: Удалить ссылку
   impressionable:
     rating: Рейтинг
   confirm:
