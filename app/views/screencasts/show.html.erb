@@ -14,6 +14,8 @@
       <div class="pull-left">
         <%= render '/impressionable/rating', impressionable: @screencast %>
         <span class="author"><%= t "screencast_show.author" %>: <%= render @screencast.user %></span>
+
+        <%= share_options %>
       </div>
       <div class="pull-right">
         <% if can? :edit, @screencast %>

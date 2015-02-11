@@ -40,6 +40,7 @@
 
     <%= render 'shared/footer' %>
 
-    <%= javascript_include_tag 'trackers' if Rails.env.production? %>
+    <%= javascript_include_tag "//yastatic.net/share/share.js", charset: 'utf-8', async: true %>
+    <%= javascript_include_tag 'trackers', async: true if Rails.env.production? %>
   </body>
 </html>

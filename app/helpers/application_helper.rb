@@ -19,6 +19,15 @@ module ApplicationHelper
     end
   end
 
+  def share_options
+    content_tag :div, nil,  class: "yashare-auto-init sharing",
+                            data: {
+                              yashareL10n: "ru",
+                              yashareType: "none",
+                              yashareQuickServices: "facebook,twitter,vkontakte,gplus"
+                            }
+  end
+
   private
 
     def navigation_link title, path, activeness_criterias={}
