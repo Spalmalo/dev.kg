@@ -35,6 +35,8 @@ Run web-server:
 
     rails s
 
+Open http://lvh.me:3000
+
 ## Deploy
 
 Project is hosted on [heroku](https://heroku.com). [Travis CI](https://travis-ci.org/Spalmalo/dev.kg) is configured to deploy code automatically on successful build(database migrations included).
