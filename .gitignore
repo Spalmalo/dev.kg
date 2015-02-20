@@ -21,3 +21,5 @@
 .env
 
 /coverage
+
+/app/assets/images/flags-*.png

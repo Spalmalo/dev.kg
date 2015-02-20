@@ -3,7 +3,7 @@
 <ul id="flags" class="list-unstyled">
   <% @flags.each do |flag| %>
     <%= content_tag :li, flag, class: flag.downcase do %>
-      <%= image_tag "flags/#{ flag.downcase }.png", alt: flag, title: flag, width: 32, height: 32, srcset: "#{ image_path "flags/#{ flag.downcase }.png" } 1x, #{ image_path "flags-2x/#{ flag.downcase }.png" } 2x" %>
+      <span class="flag"></span>
       <%= flag %>
     <% end %>
   <% end %>
