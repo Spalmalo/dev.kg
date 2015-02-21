@@ -7,7 +7,7 @@ class Ability
     can :read, :all
 
     can :create, Video if user.persisted?
-    can [:update, :destroy], Video do |video|
+    can [:update, :destroy, :publish], Video do |video|
       video.user == user
     end
 

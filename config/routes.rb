@@ -9,10 +9,14 @@ Rails.application.routes.draw do
     post :dislike,  to: 'impressionable#dislike', as: :dislikes
   end
 
+  concern :publishable do
+    patch :publish
+  end
+
   get '/screencasts',     to: redirect('/')
 
-  resources :screencasts, concerns: :impressionable, except: [:index]
-  resources :clips,       concerns: :impressionable
+  resources :screencasts, concerns: [:impressionable, :publishable], except: [:index]
+  resources :clips,       concerns: [:impressionable, :publishable]
 
   root to: "screencasts#index"
 

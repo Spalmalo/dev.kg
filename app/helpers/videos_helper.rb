@@ -7,6 +7,17 @@ module VideosHelper
     end
   end
 
+  def video_publish_date video
+    if video.published?
+      [
+        [ Video.human_attribute_name(:published_at), ':'].join,
+        content_tag(:time, l(video.published_at, format: :short), datetime: video.published_at.to_s, title: l(video.published_at, format: :long))
+      ].join(' ').html_safe
+    else
+      content_tag :span, t('warnings.videos.not_published'), class: 'label label-warning'
+    end
+  end
+
   private
 
     def video_tabs_list video
