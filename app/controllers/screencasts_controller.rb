@@ -1,19 +1,9 @@
-class ScreencastsController < ApplicationController
-
-  before_action :authenticate!, except: [:show, :index]
-
-  load_and_authorize_resource
+class ScreencastsController < VideosController
 
   before_action :build_asciicast, only: [:new, :edit]
 
   def index
-    @screencasts = @screencasts.index.includes(:user).page(params[:page]).per(10)
-  end
-
-  def show
-  end
-
-  def new
+    @screencasts = @screencasts.for_user(current_user).index.includes(:user).page(params[:page]).per(10)
   end
 
   def create
@@ -30,9 +20,6 @@ class ScreencastsController < ApplicationController
   def destroy
     @screencast.destroy
     redirect_to :root, notice: t('screencast_delete.notice')
-  end
-
-  def edit
   end
 
   def update

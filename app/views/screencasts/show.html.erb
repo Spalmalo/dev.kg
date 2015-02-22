@@ -9,25 +9,7 @@
     </div>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-body">
-      <div class="pull-left">
-        <%= render '/impressionable/rating', impressionable: @screencast %>
-        <span class="author"><%= t "screencast_show.author" %>: <%= render @screencast.user %></span>
-
-        <%= share_options %>
-      </div>
-      <div class="pull-right">
-        <% if can? :edit, @screencast %>
-          <%= link_to [glyph('edit'), t("screencast_show.edit")].join(' ').html_safe, edit_screencast_path(@screencast), class: "btn btn-default btn-xs" %>
-        <% end %>
-
-        <% if can? :destroy, @screencast %>
-          <%= link_to [glyph('trash'), t("screencast_show.delete")].join(' ').html_safe, @screencast, class: "btn btn-danger btn-xs", method: :delete, data: { confirm: t("confirm.are_you_sure") } %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'panel', locals: { video: @screencast } %>
 
   <div class="well">
     <p class="description"><%= @screencast.description %></p>
