@@ -18,6 +18,10 @@ Rails.application.routes.draw do
   resources :screencasts, concerns: [:impressionable, :publishable], except: [:index]
   resources :clips,       concerns: [:impressionable, :publishable]
 
+  resources :asciicasts, only: [] do
+    post :preview, on: :collection
+  end
+
   root to: "screencasts#index"
 
   resources :pages, only: :show, path: ''

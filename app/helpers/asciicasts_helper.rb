@@ -1,7 +1,7 @@
 module AsciicastsHelper
 
   def asciicast_html asciicast
-    markdown.render asciicast.content
+    markdown.render(asciicast.content || "")
   end
 
   private
