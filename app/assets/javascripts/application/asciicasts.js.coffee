@@ -12,4 +12,4 @@ handleAsciicastPreview = ->
           content: $("#screencast_asciicast_attributes_content").val()
 
 jQuery ->
-  handleAsciicastPreview() if $("#screencast_edit").length > 0
+  handleAsciicastPreview() if $("#asciicast_preview").length > 0
