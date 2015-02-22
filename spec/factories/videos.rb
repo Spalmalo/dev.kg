@@ -4,6 +4,7 @@ FactoryGirl.define do
     description "Жирафик Рафик сейчас научит вас писать на рельсах."
     sequence(:video_url) { |i| "https://www.youtube.com/watch?v=qpgT_62y5kQ#{i}" }
     type "Clip"
+    published_at { Time.now }
     user
 
     trait :screencast do

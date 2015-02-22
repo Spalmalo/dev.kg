@@ -15,14 +15,17 @@ ru:
     snippets: Код
     comments: Комментарии
     asciicast: ASCIIcast
-  screencast_list_item:
-    added: Добавлен
-    author: Автор
-    watch: Посмотреть
-  screencast_show:
+  video_panel:
     delete: Удалить
     edit: Редактировать
+    author: Добавил(а)
+    publish: Опубликовать
+  video:
+    notices:
+      published: Видео было успешно опубликовано.
+  screencast_list_item:
     author: Автор
+    watch: Посмотреть
   screencast_delete:
     notice: Скринкаст был удален
   screencast_update:
@@ -38,13 +41,8 @@ ru:
     asciicast_preview: Превью
     remove_asciicast: Удалить ASCIIcast
   clip_list_item:
-    added: Добавлен
     author: Добавил(а)
     watch: Посмотреть
-  clip_show:
-    delete: Удалить
-    edit: Редактировать
-    author: Добавил(а)
   clip_delete:
     notice: Ролик был удален
   clip_update:
@@ -88,6 +86,7 @@ ru:
         video_url: Ссылка на видео
         created_at: Создан
         updated_at: Обновлен
+        published_at: Опубликовано
         user: Автор
       reference:
         title: Заголовок
@@ -107,3 +106,6 @@ ru:
           attributes:
             user:
               cannot_have_impression_on_own_videos: не может лайкать собственные видео
+  warnings:
+    videos:
+      not_published: не опубликовано

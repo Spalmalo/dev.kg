@@ -1,17 +1,7 @@
-class ClipsController < ApplicationController
-
-  before_action :authenticate!, except: [:show, :index]
-
-  load_and_authorize_resource
+class ClipsController < VideosController
 
   def index
-    @clips = @clips.index.includes(:user).page(params[:page]).per(10)
-  end
-
-  def show
-  end
-
-  def new
+    @clips = @clips.for_user(current_user).index.includes(:user).page(params[:page]).per(10)
   end
 
   def create
@@ -27,9 +17,6 @@ class ClipsController < ApplicationController
   def destroy
     @clip.destroy
     redirect_to :clips, notice: t('clip_delete.notice')
-  end
-
-  def edit
   end
 
   def update
