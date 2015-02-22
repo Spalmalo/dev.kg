@@ -35,6 +35,7 @@ ru:
     add_snippet: Добавить код
     remove_snippet: Удалить код
     asciicast: ASCIIcast
+    asciicast_preview: Превью
     remove_asciicast: Удалить ASCIIcast
   clip_list_item:
     added: Добавлен
