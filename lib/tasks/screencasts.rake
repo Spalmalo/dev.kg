@@ -41,7 +41,8 @@ namespace :screencasts do
                             description:            Faker::HipsterIpsum.paragraph,
                             video_url:              video_url,
                             user:                   users.sample,
-                            references_attributes:  references_attributes
+                            references_attributes:  references_attributes,
+                            published_at:           Time.now
       end
     end
 
