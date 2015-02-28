@@ -23,6 +23,8 @@ ru:
   video:
     notices:
       published: Видео было успешно опубликовано.
+  screencast_list:
+    meta_description: Скринкасты на темы IT на русском языке
   screencast_list_item:
     author: Автор
     watch: Посмотреть
@@ -40,6 +42,8 @@ ru:
     asciicast: ASCIIcast
     asciicast_preview: Превью
     remove_asciicast: Удалить ASCIIcast
+  clip_list:
+    meta_description: Видеоролики на темы IT на русском языке
   clip_list_item:
     author: Добавил(а)
     watch: Посмотреть

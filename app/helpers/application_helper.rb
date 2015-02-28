@@ -1,12 +1,5 @@
 module ApplicationHelper
 
-  def page_title title
-    [
-      title,
-      t('layout.sitename')
-    ].reject(&:empty?).join ' - '
-  end
-
   def site_navigation
     # TODO refactor
     content_tag :ul, class: "nav navbar-nav" do

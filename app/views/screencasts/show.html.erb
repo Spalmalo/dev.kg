@@ -1,4 +1,14 @@
-<% provide :title, @screencast.title %>
+<%
+  set_meta_tags title:        @screencast.title,
+                description:  (@screencast.description || "").truncate(255),
+                og: {
+                  site_name: t('layout.sitename'),
+                  title: @screencast.title,
+                  type:  'video.other',
+                  url:   screencast_url(@screencast),
+                  image: youtube_video_thumbnail(@screencast.video_url)
+                }
+%>
 
 <div id="screencast">
   <h1><%= @screencast.title %></h1>
