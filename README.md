@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/spalmalo/dev.kg.png?label=ready&title=Ready)](https://waffle.io/spalmalo/dev.kg)
 # [/dev/kg](http://www.dev.kg)
 
 Kyrgyzstan IT community platform.
