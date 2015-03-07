@@ -4,7 +4,7 @@
     <%= f.input :title %>
     <%= f.input :description, input_html: { rows: 4 } %>
     <%= f.input :video_url, input_html: { disabled: @screencast.persisted? } %>
-    <%= f.input :tag_list, input_html: { value: @screencast.tag_list.join(', ') } %>
+    <%= f.input :tag_list, input_html: { class: "tags", value: @screencast.tag_list.join(', ') } %>
 
     <div class="well">
       <h3><%= t('screencast_form.references') %></h3>

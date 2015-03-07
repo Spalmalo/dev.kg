@@ -12,10 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui/autocomplete
 //= require bootstrap/alert
 //= require bootstrap/collapse
 //= require bootstrap/dropdown
 //= require bootstrap/tab
+//= require bootstrap-tokenfield
 //= require disqus_rails
 //= require cocoon
 //= require highlight.pack
