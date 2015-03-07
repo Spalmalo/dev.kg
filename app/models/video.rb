@@ -1,6 +1,8 @@
 class Video < ActiveRecord::Base
   include Sluggable
 
+  acts_as_taggable
+
   validates_presence_of :title, :description, :video_url, :user
   validates_format_of :video_url, with: /\Ahttps?:\/\/www\.youtube\.com\/watch\?v\=.+/
   validates_length_of :title, maximum: 255

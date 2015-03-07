@@ -27,6 +27,7 @@ gem 'cancancan', '~> 1.10'
 gem 'cocoon'
 gem 'bootswatch-rails'
 gem 'redcarpet'
+gem 'acts-as-taggable-on'
 
 group :production do
   gem 'rails_12factor'
