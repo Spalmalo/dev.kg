@@ -23,6 +23,8 @@
 
   <div class="well">
     <p class="description"><%= @screencast.description %></p>
+
+    <%= render partial: 'tags', locals: { video: @screencast } %>
   </div>
 
   <%= video_tabs @screencast %>

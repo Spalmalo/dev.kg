@@ -33,6 +33,7 @@ class ClipsController < VideosController
       params.require(:clip).permit  :title,
                                     :description,
                                     :video_url,
+                                    :tag_list,
                                     references_attributes:  [:title, :url, :_destroy, :id]
     end
 

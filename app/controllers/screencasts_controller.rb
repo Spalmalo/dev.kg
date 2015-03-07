@@ -37,6 +37,7 @@ class ScreencastsController < VideosController
       params.require(:screencast).permit  :title,
                                           :description,
                                           :video_url,
+                                          :tag_list,
                                           references_attributes:  [:title, :url, :_destroy, :id],
                                           snippets_attributes:    [:description, :code, :language, :_destroy, :id],
                                           asciicast_attributes:   [:content, :_destroy, :id]

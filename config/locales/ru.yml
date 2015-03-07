@@ -91,6 +91,7 @@ ru:
         created_at: Создан
         updated_at: Обновлен
         published_at: Опубликовано
+        tag_list: Теги
         user: Автор
       reference:
         title: Заголовок
@@ -113,3 +114,4 @@ ru:
   warnings:
     videos:
       not_published: не опубликовано
+  tags: Теги

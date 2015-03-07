@@ -1,10 +1,12 @@
+/*
+ *= require jquery-ui/autocomplete
+ *= require bootstrap-tokenfield
+ *= require highlight/monokai_sublime
+*/
 @import "compass";
 @import "bootstrap-sprockets";
 @import "bootswatch/slate/variables";
 @import "bootstrap";
 @import "bootswatch/slate/bootswatch";
-@import "highlight/monokai_sublime";
-// @import "formtastic";
-// @import "formtastic-bootstrap";
 @import "application/mixins/**/*";
 @import "application/**/*";

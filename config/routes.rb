@@ -22,6 +22,10 @@ Rails.application.routes.draw do
     post :preview, on: :collection
   end
 
+  resources :tags, only: [] do
+    get :autocomplete_tag_name, on: :collection, path: 'autocomplete', as: :autocomplete
+  end
+
   root to: "screencasts#index"
 
   resources :pages, only: :show, path: ''

@@ -23,6 +23,8 @@
 
   <div class="well">
     <p class="description"><%= @clip.description %></p>
+
+    <%= render partial: 'tags', locals: { video: @clip } %>
   </div>
 
   <%= video_tabs @clip %>

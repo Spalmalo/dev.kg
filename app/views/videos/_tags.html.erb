@@ -1,0 +1,8 @@
+<% if video.tags.any? %>
+  <section class="tags">
+    <h3><%= t "tags" %>:</h3>
+    <ul class="list-inline">
+      <%= render partial: 'tag', collection: video.tags, as: :tag %>
+    </ul>
+  </section>
+<% end %>
