@@ -14,9 +14,4 @@ script:
   - bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
-deploy:
-  provider: heroku
-  api_key:
-    secure: Tg43xdnH35LQGefy6z5rCnyvSJs6tAJxLCbxGhBgnasm3y6T9bSNNsT3tYjrRdhOKnc6gqqzTUs0RwmVuNzk+fpajNBw7nwdJ3lBwlWc2CdHSggBHIsodzNOrBAmNClYHO7RKC2aFYb5oRLWHkrtuPFJC7Yk3YKlDfCSKuNO9gA=
-  app: dev-kg
-  run: "rake db:migrate"
+
