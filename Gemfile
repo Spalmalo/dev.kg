@@ -32,14 +32,20 @@ gem 'meta-tags'
 gem 'acts-as-taggable-on'
 gem 'bootstrap_tokenfield_rails'
 gem 'rails-jquery-autocomplete'
+gem 'foreman'
 
 group :production do
-  gem 'rails_12factor'
   gem 'sentry-raven', :require => 'raven'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
+  gem 'capistrano'
+  gem 'capistrano-rvm'
+  gem 'capistrano-bundler'
+  gem 'capistrano-foreman'
+  gem 'capistrano-rails'
+  gem 'capistrano-rails-console'
 end
 
 group :development, :test do
