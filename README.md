@@ -3,7 +3,7 @@
 Kyrgyzstan IT community platform.
 
 [![Stories in Ready](https://badge.waffle.io/spalmalo/dev.kg.png?label=ready&title=Ready)](https://waffle.io/spalmalo/dev.kg)
-![build status](https://travis-ci.org/Spalmalo/dev.kg.svg?branch=master)
+[![Build Status](https://travis-ci.org/Spalmalo/dev.kg.svg?branch=master)](https://travis-ci.org/Spalmalo/dev.kg)
 [![Code Climate](https://codeclimate.com/github/Spalmalo/dev.kg/badges/gpa.svg)](https://codeclimate.com/github/Spalmalo/dev.kg)
 [![Dependencies status](https://gemnasium.com/Spalmalo/dev.kg.png)](https://gemnasium.com/Spalmalo/dev.kg)
 ## Setup
