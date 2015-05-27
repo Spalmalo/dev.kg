@@ -19,5 +19,5 @@
 /config/database.yml
 
 .env
-
+/.ruby-gemset
 /coverage
