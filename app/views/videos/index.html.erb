@@ -1,0 +1,14 @@
+<%
+  set_meta_tags title:        t("pages.home"),
+                description:  t("home.meta_description")
+%>
+
+<h1><%= t("pages.home") %></h1>
+
+<div id="videos">
+  <%= render @videos %>
+</div>
+
+<div class="text-center">
+  <%= paginate @videos, theme: 'twitter-bootstrap-3', window: 1 %>
+</div>

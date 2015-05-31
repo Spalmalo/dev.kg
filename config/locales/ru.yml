@@ -4,6 +4,7 @@ ru:
   confirmation:
     are_you_sure: Вы уверены?
   pages:
+    home: Главная
     screencast_list: Скринкасты
     screencast_new: Добавить скринкаст
     screencast_edit: Редактирование %{title}
@@ -25,6 +26,8 @@ ru:
   video:
     notices:
       published: Видео было успешно опубликовано.
+  home:
+    meta_description: Скринкасты и видеоролики на темы IT на русском языке
   screencast_list:
     meta_description: Скринкасты на темы IT на русском языке
   screencast_list_item:

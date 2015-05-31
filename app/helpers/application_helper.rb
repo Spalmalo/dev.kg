@@ -3,7 +3,7 @@ module ApplicationHelper
   def site_navigation
     # TODO refactor
     content_tag :ul, class: "nav navbar-nav" do
-      concat navigation_link(t('pages.screencast_list'), root_path, controller: "screencasts")
+      concat navigation_link(t('pages.screencast_list'), screencasts_path, controller: "screencasts")
       concat navigation_link(t('pages.clip_list'), clips_path, controller: "clips")
 
       Page.all.each do |page|

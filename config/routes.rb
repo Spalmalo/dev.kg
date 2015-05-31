@@ -13,9 +13,7 @@ Rails.application.routes.draw do
     patch :publish
   end
 
-  get '/screencasts',     to: redirect('/')
-
-  resources :screencasts, concerns: [:impressionable, :publishable], except: [:index]
+  resources :screencasts, concerns: [:impressionable, :publishable]
   resources :clips,       concerns: [:impressionable, :publishable]
 
   resources :asciicasts, only: [] do
@@ -26,7 +24,7 @@ Rails.application.routes.draw do
     get :autocomplete_tag_name, on: :collection, path: 'autocomplete', as: :autocomplete
   end
 
-  root to: "screencasts#index"
+  root to: "videos#index"
 
   resources :pages, only: :show, path: ''
 end

@@ -1,4 +1,4 @@
-class ScreencastsController < VideosController
+class ScreencastsController < BaseVideosController
 
   before_action :build_asciicast, only: [:new, :edit]
 

@@ -1,4 +1,4 @@
-class ClipsController < VideosController
+class ClipsController < BaseVideosController
 
   def index
     @clips = @clips.for_user(current_user).index.includes(:user).page(params[:page]).per(10)
