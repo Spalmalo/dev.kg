@@ -20,7 +20,7 @@
       <% end %>
 
       <% if can? :destroy, video %>
-        <%= button_to video, method: :delete, class: "btn btn-danger btn-xs" do %>
+        <%= button_to video, method: :delete, class: "btn btn-danger btn-xs", data: { confirm: t("confirmation.are_you_sure") } do %>
           <%= glyph('trash') %> <%= t("video_panel.delete") %>
         <% end %>
       <% end %>

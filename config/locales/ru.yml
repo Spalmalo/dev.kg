@@ -1,6 +1,8 @@
 ru:
   layout:
     sitename: '/dev/kg'
+  confirmation:
+    are_you_sure: Вы уверены?
   pages:
     screencast_list: Скринкасты
     screencast_new: Добавить скринкаст

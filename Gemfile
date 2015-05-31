@@ -33,6 +33,7 @@ gem 'acts-as-taggable-on'
 gem 'bootstrap_tokenfield_rails'
 gem 'rails-jquery-autocomplete'
 gem 'foreman'
+gem 'paranoia', "~> 2.0"
 
 group :production do
   gem 'sentry-raven', :require => 'raven'
