@@ -29,7 +29,7 @@ class PagesController < ApplicationController
 
   def destroy
     @page.destroy
-    redirect_to :clips, notice: t('page_delete.notice')
+    redirect_to :root, notice: t('page_delete.notice')
   end
 
   private
