@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531113914) do
+ActiveRecord::Schema.define(version: 20150531115210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,8 +19,9 @@ ActiveRecord::Schema.define(version: 20150531113914) do
   create_table "asciicasts", force: :cascade do |t|
     t.integer  "video_id"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.text     "content_html"
   end
 
   add_index "asciicasts", ["video_id"], name: "index_asciicasts_on_video_id", using: :btree

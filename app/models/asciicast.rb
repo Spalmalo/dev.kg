@@ -1,5 +1,6 @@
 class Asciicast < ActiveRecord::Base
   include Auditable
+  include Renderable
 
   belongs_to :video, inverse_of: :asciicast
 

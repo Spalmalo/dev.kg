@@ -5,11 +5,11 @@ module Renderable
     before_save :render_content
   end
 
-  private
+  def render_content
+    self.content_html = markdown.render(content || "")
+  end
 
-    def render_content
-      self.content_html = markdown.render(content || "")
-    end
+  private
 
     def markdown
       Redcarpet::Markdown.new(HtmlWithHljs, fenced_code_blocks: true)
