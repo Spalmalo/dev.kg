@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   include Oauth
 
+  enum role: %w(author moderator admin)
+
   validates_presence_of :provider, :uid, :nickname
   validates_uniqueness_of :uid, scope: :provider
 
