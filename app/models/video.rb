@@ -1,5 +1,6 @@
 class Video < ActiveRecord::Base
   include Sluggable
+  include Auditable
 
   acts_as_taggable
   acts_as_paranoid
@@ -20,7 +21,7 @@ class Video < ActiveRecord::Base
 
   attr_readonly :video_url
 
-  accepts_nested_attributes_for :references, reject_if: lambda { |a| a[:url].blank? },      allow_destroy: true
+  accepts_nested_attributes_for :references, reject_if: lambda { |a| a[:url].blank? }, allow_destroy: true
 
   scope :index, -> { order published_at: :desc }
   scope :published, -> { where.not published_at: nil }

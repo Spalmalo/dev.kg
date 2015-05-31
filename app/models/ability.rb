@@ -8,7 +8,7 @@ class Ability
 
     can :create, Video if user.persisted?
     can [:update, :destroy, :publish], Video do |video|
-      video.user == user
+      video.user == user or user.moderator? or user.admin?
     end
 
   end

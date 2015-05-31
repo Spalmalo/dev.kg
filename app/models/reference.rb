@@ -1,4 +1,6 @@
 class Reference < ActiveRecord::Base
+  include Auditable
+
   belongs_to :video, inverse_of: :references
 
   validates_presence_of :video, :url
