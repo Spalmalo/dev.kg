@@ -3,11 +3,11 @@ module ApplicationHelper
   def site_navigation
     # TODO refactor
     content_tag :ul, class: "nav navbar-nav" do
-      concat navigation_link(t('pages.screencast_list'), screencasts_path, controller: "screencasts")
-      concat navigation_link(t('pages.clip_list'), clips_path, controller: "clips")
+      concat navigation_link(t('pages.screencast_list'), screencasts_path, activeness_criterias: { controller: "screencasts" })
+      concat navigation_link(t('pages.clip_list'), clips_path, activeness_criterias: { controller: "clips" })
 
-      Page.all.each do |page|
-        concat navigation_link(page.title, page, controller: "pages", id: page.to_param)
+      Page.select(:id, :slug, :title).all.each do |page|
+        concat navigation_link(page.title, page, activeness_criterias: { controller: "pages", id: page.to_param })
       end
     end
   end
@@ -23,10 +23,11 @@ module ApplicationHelper
 
   private
 
-    def navigation_link title, path, activeness_criterias={}
+    def navigation_link title, path, options={}
+      activeness_criterias = options.fetch :activeness_criterias, {}
       class_name = activeness_criterias.keys.all? { |key| params[key] == activeness_criterias[key] } ? 'active' : ''
       content_tag :li, class: class_name do
-        link_to title, path
+        link_to title, path, options.fetch(:link_options, {})
       end
     end
 

@@ -26,5 +26,5 @@ Rails.application.routes.draw do
 
   root to: "videos#index"
 
-  resources :pages, only: :show, path: ''
+  resources :pages, path: ''
 end

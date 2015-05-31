@@ -34,6 +34,7 @@ gem 'bootstrap_tokenfield_rails'
 gem 'rails-jquery-autocomplete'
 gem 'foreman'
 gem 'paranoia', "~> 2.0"
+gem 'paper_trail', '~> 4.0.0.rc'
 
 group :production do
   gem 'sentry-raven', :require => 'raven'

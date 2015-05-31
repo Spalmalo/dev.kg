@@ -16,12 +16,12 @@
       <% end %>
 
       <% if can? :edit, video %>
-        <%= link_to [glyph('edit'), t("video_panel.edit")].join(' ').html_safe, [:edit, video], class: "btn btn-default btn-xs" %>
+        <%= link_to [glyph('edit'), t("edit")].join(' ').html_safe, [:edit, video], class: "btn btn-default btn-xs" %>
       <% end %>
 
       <% if can? :destroy, video %>
         <%= button_to video, method: :delete, class: "btn btn-danger btn-xs", data: { confirm: t("confirmation.are_you_sure") } do %>
-          <%= glyph('trash') %> <%= t("video_panel.delete") %>
+          <%= glyph('trash') %> <%= t("delete") %>
         <% end %>
       <% end %>
     </div>

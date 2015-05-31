@@ -1,6 +1,8 @@
 ru:
   layout:
     sitename: '/dev/kg'
+  delete: Удалить
+  edit: Редактировать
   confirmation:
     are_you_sure: Вы уверены?
   pages:
@@ -13,14 +15,14 @@ ru:
     clip_edit: Редактирование %{title}
     not_found: Станица не найдена
     access_denied: Доступ запрещен
+    page_new: Добавить страницу
+    page_edit: Редактировать страницу
   video_tabs:
     references: Ссылки
     snippets: Код
     comments: Комментарии
     asciicast: ASCIIcast
   video_panel:
-    delete: Удалить
-    edit: Редактировать
     author: Добавил(а)
     publish: Опубликовать
   video:
@@ -60,6 +62,10 @@ ru:
     references: Ссылки
     add_reference: Добавить ссылку
     remove_reference: Удалить ссылку
+  page_update:
+    notice: Страница была успешно обновлена
+  page_delete:
+    notice: Страница была успешно удалена
   impressionable:
     rating: Рейтинг
   confirm:
@@ -87,6 +93,9 @@ ru:
       snippet:
         one: Код
         many: Код
+      page:
+        one: Страница
+        many: Страницы
     attributes:
       video:
         id: Идентификатор
@@ -108,6 +117,9 @@ ru:
       impression:
         user: Автор
         video: Видео
+      page:
+        title: Заголовок
+        content: Содержание
       asciicast:
         content: Текст(markdown)
     errors:

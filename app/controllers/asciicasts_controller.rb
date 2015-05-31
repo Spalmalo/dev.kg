@@ -4,6 +4,7 @@ class AsciicastsController < ApplicationController
 
   def preview
     @asciicast = Asciicast.new preview_params
+    @asciicast.render_content
   end
 
   private

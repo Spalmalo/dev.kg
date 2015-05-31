@@ -1,4 +1,6 @@
 class Snippet < ActiveRecord::Base
+  include Auditable
+
   belongs_to :video, inverse_of: :snippets
 
   validates_presence_of :video, :code, :language
