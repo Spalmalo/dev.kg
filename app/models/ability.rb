@@ -11,5 +11,7 @@ class Ability
       video.user == user or user.moderator? or user.admin?
     end
 
+    can :manage, Page if user.admin?
+
   end
 end

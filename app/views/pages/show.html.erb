@@ -1,5 +1,23 @@
 <% set_meta_tags title: @page.title %>
 
-<h1><%= @page.title %></h1>
+<article id="page">
+  <h1><%= @page.title %></h1>
 
-<%== @page.content %>
+  <% if can?(:manage, @page) or can?(:destroy, @page) %>
+    <div class="actions">
+      <% if can? :edit, @page %>
+        <%= link_to [:edit, @page], class: "btn btn-default btn-xs display-inline-block" do %>
+          <%= glyph('edit') %> <%= t("edit") %>
+        <% end %>
+      <% end %>
+
+      <% if can? :destroy, @page %>
+        <%= button_to @page, method: :delete, class: "btn btn-danger btn-xs display-inline-block", data: { confirm: t("confirmation.are_you_sure") } do %>
+          <%= glyph('trash') %> <%= t("delete") %>
+        <% end %>
+      <% end %>
+    </div>
+  <% end %>
+
+  <%== @page.content_html %>
+</article>
