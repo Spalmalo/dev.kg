@@ -30,9 +30,9 @@ module VideosHelper
 
     def tabs video
       tabs = []
+      tabs << { type: 'asciicast',  title: t("video_tabs.asciicast"),   content: Proc.new { render(video.asciicast) } } if  video.respond_to?(:asciicast) and video.asciicast.present?
       tabs << { type: 'snippets',   title: t("video_tabs.snippets"),    content: Proc.new { render(video.snippets) } } if video.respond_to?(:snippets) and video.snippets.any?
       tabs << { type: 'references', title: t("video_tabs.references"),  content: Proc.new { content_tag :ol do; render(video.references) ; end } } if  video.respond_to?(:references) and video.references.any?
-      tabs << { type: 'asciicast',  title: t("video_tabs.asciicast"),   content: Proc.new { render(video.asciicast) } } if  video.respond_to?(:asciicast) and video.asciicast.present?
       tabs << { type: 'comments',   title: t("video_tabs.comments"),    content: Proc.new { disqus_thread(video.id, video.title) } }
       tabs.first[:class] = 'active'
       tabs
