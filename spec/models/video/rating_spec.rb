@@ -7,8 +7,8 @@ describe Video, type: :model do
     let!(:video) { create :video }
 
     before do
-      10.times  { create :like,     video: video }
-      3.times   { create :dislike,  video: video }
+      10.times  { create :like,     impressionable: video }
+      3.times   { create :dislike,  impressionable: video }
       video.reload
     end
 

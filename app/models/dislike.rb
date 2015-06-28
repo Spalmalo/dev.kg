@@ -1,3 +1,3 @@
 class Dislike < Impression
-  belongs_to :video, counter_cache: true
+  belongs_to :impressionable, counter_cache: true, polymorphic: true
 end

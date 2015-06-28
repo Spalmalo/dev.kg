@@ -5,12 +5,12 @@ class ImpressionableController < ApplicationController
   before_action :authenticate!
 
   def like
-    Like.create user: current_user, video: impressionable
+    Like.create user: current_user, impressionable: impressionable
     respond_with_rating
   end
 
   def dislike
-    Dislike.create user: current_user, video: impressionable
+    Dislike.create user: current_user, impressionable: impressionable
     respond_with_rating
   end
 

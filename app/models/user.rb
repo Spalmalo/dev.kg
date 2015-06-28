@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   has_many :likes
   has_many :dislikes
 
-  def has_impression_on? video
-    impressions.where(video: video).any?
+  def has_impression_on? impressionable
+    impressions.where(impressionable: impressionable).any?
   end
 end

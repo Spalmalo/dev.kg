@@ -7,7 +7,7 @@ describe User, type: :model do
   let!(:video) { create :video }
 
   context "when user has impression on given video" do
-    before { user.likes.create video: video }
+    before { user.likes.create impressionable: video }
 
     it { is_expected.to eq true }
   end

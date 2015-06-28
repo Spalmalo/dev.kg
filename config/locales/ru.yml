@@ -153,7 +153,7 @@ ru:
         like:
           attributes:
             user:
-              cannot_have_impression_on_own_videos: не может лайкать собственные видео
+              cannot_have_impression_on_own_content: не может лайкать собственный контент
   warnings:
     not_published: не опубликовано
   tags: Теги
