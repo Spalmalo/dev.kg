@@ -17,7 +17,6 @@ class Video < ActiveRecord::Base
 
   has_many :references, inverse_of: :video
   has_many :snippets, inverse_of: :video
-  has_one  :asciicast, inverse_of: :video
 
   attr_readonly :video_url
 

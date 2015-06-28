@@ -11,20 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628091348) do
+ActiveRecord::Schema.define(version: 20150628094144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "asciicasts", force: :cascade do |t|
-    t.integer  "video_id"
+  create_table "articles", force: :cascade do |t|
+    t.integer  "parent_id"
     t.text     "content"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.text     "content_html"
+    t.string   "type"
   end
 
-  add_index "asciicasts", ["video_id"], name: "index_asciicasts_on_video_id", using: :btree
+  add_index "articles", ["parent_id"], name: "index_articles_on_parent_id", using: :btree
 
   create_table "impressions", force: :cascade do |t|
     t.integer  "impressionable_id"
@@ -153,7 +154,7 @@ ActiveRecord::Schema.define(version: 20150628091348) do
   add_index "videos", ["user_id"], name: "index_videos_on_user_id", using: :btree
   add_index "videos", ["video_url"], name: "index_videos_on_video_url", unique: true, using: :btree
 
-  add_foreign_key "asciicasts", "videos"
+  add_foreign_key "articles", "videos", column: "parent_id"
   add_foreign_key "impressions", "users"
   add_foreign_key "posts", "users"
   add_foreign_key "references", "videos"
