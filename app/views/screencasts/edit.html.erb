@@ -1,6 +1,6 @@
-<div id="screencast_edit">
-  <% provide :title, t("pages.screencast_edit", title: @screencast.title) %>
+<% set_meta_tags title: t("pages.screencast_edit", title: @screencast.title) %>
 
+<div id="screencast_edit">
   <h1><%= t("pages.screencast_edit", title: @screencast.title) %></h1>
 
   <%= render 'form' %>

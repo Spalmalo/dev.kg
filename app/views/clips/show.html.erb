@@ -1,6 +1,7 @@
 <%
   set_meta_tags title:        @clip.title,
                 description:  (@clip.description || "").truncate(255),
+                canonical:    clip_url(@clip),
                 og: {
                   site_name: t('layout.sitename'),
                   title: @clip.title,

@@ -1,6 +1,7 @@
 <%
   set_meta_tags title:        @screencast.title,
                 description:  (@screencast.description || "").truncate(255),
+                canonical:    screencast_url(@screencast),
                 og: {
                   site_name: t('layout.sitename'),
                   title: @screencast.title,
