@@ -8,6 +8,7 @@ namespace :db do
     Rake::Task['pages:populate'].execute
     Rake::Task['clips:populate'].execute
     Rake::Task['screencasts:populate'].execute
+    Rake::Task['posts:populate'].execute
     Rake::Task['snippets:populate'].execute
     Rake::Task['asciicasts:populate'].execute
     Rake::Task['impressions:populate'].execute
