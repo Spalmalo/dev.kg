@@ -5,7 +5,7 @@
                   site_name: t('layout.sitename'),
                   title: @clip.title,
                   type:  'video.other',
-                  url:   screencast_url(@clip),
+                  url:   clip_url(@clip),
                   image: youtube_video_thumbnail(@clip.video_url)
                 }
 %>
