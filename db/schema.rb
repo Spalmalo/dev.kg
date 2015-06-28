@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531115210) do
+ActiveRecord::Schema.define(version: 20150628044734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -49,6 +49,18 @@ ActiveRecord::Schema.define(version: 20150531115210) do
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "slug"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "references", force: :cascade do |t|
     t.integer  "video_id"
@@ -140,6 +152,7 @@ ActiveRecord::Schema.define(version: 20150531115210) do
   add_foreign_key "asciicasts", "videos"
   add_foreign_key "impressions", "users"
   add_foreign_key "impressions", "videos"
+  add_foreign_key "posts", "users"
   add_foreign_key "references", "videos"
   add_foreign_key "snippets", "videos"
   add_foreign_key "videos", "users"

@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :uid, scope: :provider
 
   has_many :screencasts, dependent: :destroy, inverse_of: :user
+  has_many :posts, dependent: :destroy, inverse_of: :user
 
   has_many :impressions, dependent: :destroy
   has_many :likes
