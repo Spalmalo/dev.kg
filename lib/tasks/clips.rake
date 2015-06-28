@@ -17,14 +17,14 @@ namespace :clips do
 
       references_attributes = rand(10).times.to_a.map do
         {
-          title:  [Faker::HipsterIpsum.phrase, nil].sample,
-          url:    Faker::Internet.http_url
+          title:  [FFaker::HipsterIpsum.phrase, nil].sample,
+          url:    FFaker::Internet.http_url
         }
       end
 
       Timecop.travel (video_urls.count - index).weeks.ago do
-        Clip.create!  title:        Faker::HipsterIpsum.sentence,
-                      description:  Faker::HipsterIpsum.paragraph,
+        Clip.create!  title:        FFaker::HipsterIpsum.sentence,
+                      description:  FFaker::HipsterIpsum.paragraph,
                       video_url:    video_url,
                       user:         users.sample,
                       references_attributes:  references_attributes,

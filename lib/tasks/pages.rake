@@ -14,7 +14,7 @@ namespace :pages do
     titles.each do |title|
 
       Page.create!  title: title,
-                    content:  "<p>#{ 10.times.to_a.map { Faker::HipsterIpsum.paragraph }.join('</p><p>') }</p>"
+                    content:  "<p>#{ 10.times.to_a.map { FFaker::HipsterIpsum.paragraph }.join('</p><p>') }</p>"
 
     end
 
