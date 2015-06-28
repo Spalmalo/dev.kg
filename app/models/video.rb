@@ -1,6 +1,8 @@
 class Video < ActiveRecord::Base
   include Sluggable
   include Auditable
+  include Publishable
+  include Impressionable
 
   acts_as_taggable
   acts_as_paranoid
@@ -15,36 +17,11 @@ class Video < ActiveRecord::Base
 
   has_many :references, inverse_of: :video
   has_many :snippets, inverse_of: :video
-  has_one  :asciicast, inverse_of: :video
-  has_many :likes
-  has_many :dislikes
 
   attr_readonly :video_url
 
   accepts_nested_attributes_for :references, reject_if: lambda { |a| a[:url].blank? }, allow_destroy: true
 
   scope :index, -> { order published_at: :desc }
-  scope :published, -> { where.not published_at: nil }
-
-  scope :for_user, lambda { |user|
-    if user
-      where arel_table[:user_id].eq(user.id).or(arel_table[:published_at].not_eq nil)
-    else
-      published
-    end
-  }
-
-  def rating
-    likes_count - dislikes_count
-  end
-
-  def publish!
-    return false if published?
-    touch :published_at
-  end
-
-  def published?
-    published_at.present?
-  end
 
 end

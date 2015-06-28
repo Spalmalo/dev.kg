@@ -19,7 +19,7 @@ describe ImpressionableController, type: :controller do
       end
 
       context "when user has impression on given screencast already" do
-        before { Dislike.create user: user, video: screencast }
+        before { Dislike.create user: user, impressionable: screencast }
 
         it "should not create new dislike" do
           expect { subject }.not_to change(Dislike, :count)
@@ -46,7 +46,7 @@ describe ImpressionableController, type: :controller do
       end
 
       context "when user has impression on given clip already" do
-        before { Dislike.create user: user, video: clip }
+        before { Dislike.create user: user, impressionable: clip }
 
         it "should not create new dislike" do
           expect { subject }.not_to change(Dislike, :count)
@@ -55,6 +55,33 @@ describe ImpressionableController, type: :controller do
 
       context "when clip belongs to user" do
         let!(:clip) { create :clip, user: user }
+
+        it "should not create new dislike" do
+          expect { subject }.not_to change(Dislike, :count)
+        end
+      end
+    end
+
+    context "when impressionable resource is post" do
+      let!(:_post) { create :post }
+      let(:params) { { post_id: _post.id } }
+
+      context "when user has no impressions on given post" do
+        it "should create new dislike" do
+          expect { subject }.to change(Dislike, :count).by 1
+        end
+      end
+
+      context "when user has impression on given post already" do
+        before { Dislike.create user: user, impressionable: _post }
+
+        it "should not create new dislike" do
+          expect { subject }.not_to change(Dislike, :count)
+        end
+      end
+
+      context "when post belongs to user" do
+        let!(:_post) { create :post, user: user }
 
         it "should not create new dislike" do
           expect { subject }.not_to change(Dislike, :count)

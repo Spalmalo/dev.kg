@@ -5,10 +5,9 @@ namespace :impressions do
 
     print "Creating dummy impressions..."
 
-    Video.find_each do |video|
-      User.find_each do |user|
-        Impression.create type: ["Like", "Dislike"].sample, video: video, user: user
-      end
+    User.find_each do |user|
+      Video.find_each { |video| Impression.create type: ["Like", "Dislike"].sample, impressionable: video, user: user }
+      Post.find_each { |post| Impression.create type: ["Like", "Dislike"].sample, impressionable: post, user: user }
     end
 
     print "done\n"

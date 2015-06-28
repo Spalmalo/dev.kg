@@ -27,7 +27,7 @@ describe ClipsController, type: :controller do
     context "when invalid params given" do
       let(:params) { { clip: { wrong: "params" } } }
 
-      it "should not create any screencasts" do
+      it "should not create any clips" do
         expect { subject }.not_to change Clip, :count
       end
     end

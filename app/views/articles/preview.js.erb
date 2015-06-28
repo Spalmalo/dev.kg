@@ -1,0 +1,5 @@
+$("#article_preview").html("<%= j render(partial: 'article', locals: { article: @article }) %>");
+
+$("#article_preview pre code").each(function(i, block) {
+  hljs.highlightBlock(block);
+});

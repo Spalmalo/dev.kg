@@ -1,0 +1,14 @@
+<%
+  set_meta_tags title:        t("pages.post_list"),
+                description:  t("post_list.meta_description")
+%>
+
+<h1><%= t("pages.post_list") %></h1>
+
+<div id="posts">
+  <%= render @posts %>
+</div>
+
+<div class="text-center">
+  <%= paginate @posts, theme: 'twitter-bootstrap-3', window: 1 %>
+</div>

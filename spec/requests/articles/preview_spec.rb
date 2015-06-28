@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe 'POST /asciicasts/preview' do
-  subject { post "/asciicasts/preview", params, headers ; response }
+describe 'POST /articles/preview' do
+  subject { post "/articles/preview", params, headers ; response }
 
-  let(:params) { { asciicast: attributes_for(:asciicast, content: "# ASCIIcast test\nIt works!") } }
+  let(:params) { { article: attributes_for(:article, content: "# Article markdown render test\nIt works!") } }
   let(:headers) { {} }
 
   context "when user is signed in" do
@@ -14,8 +14,8 @@ describe 'POST /asciicasts/preview' do
     context "when requested data type is HTML" do
       it { is_expected.to be_successful }
 
-      it "should contain rendered asciicast" do
-        expect(subject.body).to include "<h1>ASCIIcast test</h1>"
+      it "should contain rendered article" do
+        expect(subject.body).to include "<h1>Article markdown render test</h1>"
       end
     end
 
@@ -24,8 +24,8 @@ describe 'POST /asciicasts/preview' do
 
       it { is_expected.to be_successful }
 
-      it "should contain rendered asciicast" do
-        expect(subject.body).to include '<h1>ASCIIcast test<\/h1>'
+      it "should contain rendered article" do
+        expect(subject.body).to include '<h1>Article markdown render test<\/h1>'
       end
     end
 

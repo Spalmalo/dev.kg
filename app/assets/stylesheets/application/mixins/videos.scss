@@ -25,26 +25,9 @@
 @mixin video_show {
   margin-bottom: 40px;
 
-  #rating, .author {
-    display: inline-block;
-    vertical-align: top;
-  }
-
-  #rating {
-    margin-right: 10px;
-  }
-
   .description {
     white-space: pre-wrap;
     word-wrap: break-word;
-  }
-
-  .panel {
-    .actions {
-      form, button {
-        display: inline-block;
-      }
-    }
   }
 }
 

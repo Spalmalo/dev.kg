@@ -22,7 +22,7 @@ describe 'POST /screencasts/:id/like' do
     end
 
     context "when screencast has current user impression already" do
-      before { Dislike.create user: user, video: screencast }
+      before { Dislike.create user: user, impressionable: screencast }
 
       it { is_expected.to redirect_to screencast }
     end
@@ -57,7 +57,7 @@ describe 'POST /screencasts/:id/dislike' do
     end
 
     context "when screencast has current user impression already" do
-      before { Dislike.create user: user, video: screencast }
+      before { Dislike.create user: user, impressionable: screencast }
 
       it { is_expected.to redirect_to screencast }
     end

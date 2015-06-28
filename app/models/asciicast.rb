@@ -1,8 +1,5 @@
-class Asciicast < ActiveRecord::Base
-  include Auditable
-  include Renderable
+class Asciicast < Article
 
-  belongs_to :video, inverse_of: :asciicast
+  belongs_to :screencast, inverse_of: :asciicast, required: true, foreign_key: :parent_id
 
-  validates_presence_of :video, :content
 end

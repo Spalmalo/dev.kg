@@ -1,0 +1,13 @@
+<%= f.inputs do %>
+  <div id="article_inputs" role="tabpanel">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="input_tab active"><a href="#article_input" aria-controls="article_input" role="tab" data-toggle="tab"><%= t "post_article_form.article" %></a></li>
+      <li role="presentation" class="preview_tab"><a href="#article_preview" aria-controls="article_preview" role="tab" data-toggle="tab"><%= t "post_article_form.article_preview" %></a></li>
+    </ul>
+
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="article_input"><%= f.input :content, hint: link_to('Markdown cheatsheet', 'https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet', target: '_blank') %></div>
+      <div role="tabpanel" class="tab-pane" id="article_preview"></div>
+    </div>
+  </div>
+<% end %>

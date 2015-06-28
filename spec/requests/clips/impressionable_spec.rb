@@ -22,7 +22,7 @@ describe 'POST /clips/:id/like' do
     end
 
     context "when clip has current user impression already" do
-      before { Dislike.create user: user, video: clip }
+      before { Dislike.create user: user, impressionable: clip }
 
       it { is_expected.to redirect_to clip }
     end
@@ -57,7 +57,7 @@ describe 'POST /clips/:id/dislike' do
     end
 
     context "when clip has current user impression already" do
-      before { Dislike.create user: user, video: clip }
+      before { Dislike.create user: user, impressionable: clip }
 
       it { is_expected.to redirect_to clip }
     end

@@ -11,33 +11,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531115210) do
+ActiveRecord::Schema.define(version: 20150628110137) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "asciicasts", force: :cascade do |t|
-    t.integer  "video_id"
+  create_table "articles", force: :cascade do |t|
+    t.integer  "parent_id"
     t.text     "content"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.text     "content_html"
+    t.string   "type"
+    t.datetime "deleted_at"
   end
 
-  add_index "asciicasts", ["video_id"], name: "index_asciicasts_on_video_id", using: :btree
+  add_index "articles", ["deleted_at"], name: "index_articles_on_deleted_at", using: :btree
+  add_index "articles", ["parent_id"], name: "index_articles_on_parent_id", using: :btree
 
   create_table "impressions", force: :cascade do |t|
-    t.integer  "video_id"
+    t.integer  "impressionable_id"
     t.integer  "user_id"
     t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+    t.string   "impressionable_type"
   end
 
+  add_index "impressions", ["impressionable_id"], name: "index_impressions_on_impressionable_id", using: :btree
   add_index "impressions", ["type"], name: "index_impressions_on_type", using: :btree
-  add_index "impressions", ["user_id", "video_id"], name: "index_impressions_on_user_id_and_video_id", unique: true, using: :btree
+  add_index "impressions", ["user_id", "impressionable_type", "impressionable_id"], name: "uniqueness_index", unique: true, using: :btree
   add_index "impressions", ["user_id"], name: "index_impressions_on_user_id", using: :btree
-  add_index "impressions", ["video_id"], name: "index_impressions_on_video_id", using: :btree
 
   create_table "pages", force: :cascade do |t|
     t.string   "slug"
@@ -49,6 +53,21 @@ ActiveRecord::Schema.define(version: 20150531115210) do
   end
 
   add_index "pages", ["slug"], name: "index_pages_on_slug", unique: true, using: :btree
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "slug"
+    t.string   "title"
+    t.text     "description"
+    t.integer  "user_id"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.datetime "published_at"
+    t.integer  "likes_count",    default: 0
+    t.integer  "dislikes_count", default: 0
+  end
+
+  add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "references", force: :cascade do |t|
     t.integer  "video_id"
@@ -137,9 +156,8 @@ ActiveRecord::Schema.define(version: 20150531115210) do
   add_index "videos", ["user_id"], name: "index_videos_on_user_id", using: :btree
   add_index "videos", ["video_url"], name: "index_videos_on_video_url", unique: true, using: :btree
 
-  add_foreign_key "asciicasts", "videos"
   add_foreign_key "impressions", "users"
-  add_foreign_key "impressions", "videos"
+  add_foreign_key "posts", "users"
   add_foreign_key "references", "videos"
   add_foreign_key "snippets", "videos"
   add_foreign_key "videos", "users"

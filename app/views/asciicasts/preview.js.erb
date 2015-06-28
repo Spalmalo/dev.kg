@@ -1,5 +1,0 @@
-$("#asciicast_preview").html("<%= j render(partial: 'asciicast', locals: { asciicast: @asciicast }) %>");
-
-$("#asciicast_preview pre code").each(function(i, block) {
-  hljs.highlightBlock(block);
-});

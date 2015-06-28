@@ -13,6 +13,9 @@ ru:
     clip_list: Ролики
     clip_new: Добавить ролик
     clip_edit: Редактирование %{title}
+    post_list: Статьи
+    post_new: Добавить статью
+    post_edit: Редактирование %{title}
     not_found: Станица не найдена
     access_denied: Доступ запрещен
     page_new: Добавить страницу
@@ -22,12 +25,15 @@ ru:
     snippets: Код
     comments: Комментарии
     asciicast: ASCIIcast
-  video_panel:
+  panel:
     author: Добавил(а)
     publish: Опубликовать
   video:
     notices:
       published: Видео было успешно опубликовано.
+  post:
+    notices:
+      published: Статья была успешно опубликована.
   home:
     meta_description: Скринкасты и видеоролики на темы IT на русском языке
   screencast_list:
@@ -49,6 +55,9 @@ ru:
     asciicast: ASCIIcast
     asciicast_preview: Превью
     remove_asciicast: Удалить ASCIIcast
+  post_article_form:
+    article: Статья
+    article_preview: Превью
   clip_list:
     meta_description: Видеоролики на темы IT на русском языке
   clip_list_item:
@@ -58,10 +67,19 @@ ru:
     notice: Ролик был удален
   clip_update:
     notice: Ролик был успешно обновлен
+  post_update:
+    notice: Статья была успешно обновлена
   clip_form:
     references: Ссылки
     add_reference: Добавить ссылку
     remove_reference: Удалить ссылку
+  post_list:
+    meta_description: Статьи на темы IT на русском языке
+  post_list_item:
+    author: Добавил(а)
+    read: Читать
+  post_delete:
+    notice: Статья был удалена
   page_update:
     notice: Страница была успешно обновлена
   page_delete:
@@ -87,6 +105,8 @@ ru:
         one: Скринкаст
       clip:
         one: Ролик
+      post:
+        one: Статья
       reference:
         one: Ссылка
         many: Ссылки
@@ -107,6 +127,15 @@ ru:
         published_at: Опубликовано
         tag_list: Теги
         user: Автор
+      post:
+        id: Идентификатор
+        title: Заголовок
+        description: Описание
+        created_at: Создана
+        updated_at: Обновлена
+        published_at: Опубликована
+        tag_list: Теги
+        user: Автор
       reference:
         title: Заголовок
         url: Ссылка
@@ -120,15 +149,14 @@ ru:
       page:
         title: Заголовок
         content: Содержание
-      asciicast:
+      article:
         content: Текст(markdown)
     errors:
       models:
         like:
           attributes:
             user:
-              cannot_have_impression_on_own_videos: не может лайкать собственные видео
+              cannot_have_impression_on_own_content: не может лайкать собственный контент
   warnings:
-    videos:
-      not_published: не опубликовано
+    not_published: не опубликовано
   tags: Теги

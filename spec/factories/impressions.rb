@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :impression do
-    video
+    association :impressionable, factory: :video
     user
 
     trait :like do

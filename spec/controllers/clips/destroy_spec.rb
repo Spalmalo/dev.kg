@@ -20,8 +20,8 @@ describe ClipsController, type: :controller do
     context "when clip belongs to other user" do
       let!(:clip) { create :clip }
 
-      it "should not destroy any screencasts" do
-        expect { subject }.not_to change(Screencast, :count)
+      it "should not destroy any clips" do
+        expect { subject }.not_to change(Clip, :count)
       end
 
     end
