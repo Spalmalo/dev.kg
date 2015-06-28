@@ -11,7 +11,8 @@ namespace :posts do
       Timecop.travel index.weeks.ago do
         Post.create!  title:        FFaker::HipsterIpsum.sentence,
                       description:  FFaker::HipsterIpsum.paragraph,
-                      user:         users.sample
+                      user:         users.sample,
+                      published_at: Time.now
       end
     end
 

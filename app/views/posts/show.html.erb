@@ -1,0 +1,43 @@
+<%
+  set_meta_tags title:        @post.title,
+                description:  (@post.description || "").truncate(255),
+                canonical:    post_url(@post),
+                og: {
+                  site_name: t('layout.sitename'),
+                  title: @post.title,
+                  url:   post_url(@post)
+                }
+%>
+
+<div id="post">
+  <h1><%= @post.title %></h1>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="pull-left">
+        <span class="author"><%= t "panel.author" %>: <%= render @post.user %></span>
+
+        <%= share_options if @post.published? %>
+      </div>
+      <div class="pull-right actions">
+        <% if @post.published? %>
+          <%= post_publish_date @post %>
+        <% elsif can? :publish, @post %>
+          <%= button_to [@post, :publish], method: :patch, class: "btn btn-default btn-xs" do %>
+            <%= glyph('ok') %> <%= t("panel.publish") %>
+          <% end %>
+        <% end %>
+
+        <% if can? :edit, @post %>
+          <%= link_to [glyph('edit'), t("edit")].join(' ').html_safe, [:edit, @post], class: "btn btn-default btn-xs" %>
+        <% end %>
+
+        <% if can? :destroy, @post %>
+          <%= button_to @post, method: :delete, class: "btn btn-danger btn-xs", data: { confirm: t("confirmation.are_you_sure") } do %>
+            <%= glyph('trash') %> <%= t("delete") %>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

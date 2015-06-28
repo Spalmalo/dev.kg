@@ -1,0 +1,9 @@
+<div class="post_item">
+  <%= link_to content_tag(:h2, post.title), post %>
+
+  <div class="published_at"><%= post_publish_date post %>; <%= t("post_list_item.author") %>: <%= render post.user %></div>
+
+  <p class="description"><%= post.description %></p>
+
+  <%= link_to [glyph("arrow-right"), t("post_list_item.read")].join(' ').html_safe, post %>
+</div>

@@ -2,6 +2,7 @@
   <ul class="nav nav-list">
     <li><%= link_to t("pages.screencast_new"), new_screencast_path %></li>
     <li><%= link_to t("pages.clip_new"), new_clip_path %></li>
+    <li><%= link_to t("pages.post_new"), new_post_path %></li>
     <% if can? :create, Page %>
       <li><%= link_to t("pages.page_new"), new_page_path %></li>
     <% end %>

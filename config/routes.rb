@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   resources :screencasts, concerns: [:impressionable, :publishable]
   resources :clips,       concerns: [:impressionable, :publishable]
+  resources :posts,       concerns: [:impressionable, :publishable]
 
   resources :asciicasts, only: [] do
     post :preview, on: :collection

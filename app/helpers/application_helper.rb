@@ -5,6 +5,7 @@ module ApplicationHelper
     content_tag :ul, class: "nav navbar-nav" do
       concat navigation_link(t('pages.screencast_list'), screencasts_path, activeness_criterias: { controller: "screencasts" })
       concat navigation_link(t('pages.clip_list'), clips_path, activeness_criterias: { controller: "clips" })
+      concat navigation_link(t('pages.post_list'), posts_path, activeness_criterias: { controller: "posts" })
 
       Page.select(:id, :slug, :title).all.each do |page|
         concat navigation_link(page.title, page, activeness_criterias: { controller: "pages", id: page.to_param })

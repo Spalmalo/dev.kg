@@ -1,0 +1,13 @@
+<%= semantic_form_for @post do |f| %>
+
+  <%= f.inputs do %>
+    <%= f.input :title %>
+    <%= f.input :description, input_html: { rows: 4 }  %>
+
+  <% end %>
+
+  <%= f.actions do %>
+    <%= f.action :submit, as: :button, button_html: { class: "btn btn-primary" } %>
+    <%= f.action :cancel, button_html: { class: "btn btn-default" } %>
+  <% end %>
+<% end %>

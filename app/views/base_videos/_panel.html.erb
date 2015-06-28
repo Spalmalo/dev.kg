@@ -2,7 +2,7 @@
   <div class="panel-body">
     <div class="pull-left">
       <%= render '/impressionable/rating', impressionable: video %>
-      <span class="author"><%= t "video_panel.author" %>: <%= render video.user %></span>
+      <span class="author"><%= t "panel.author" %>: <%= render video.user %></span>
 
       <%= share_options if video.published? %>
     </div>
@@ -11,7 +11,7 @@
         <%= video_publish_date video %>
       <% elsif can? :publish, video %>
         <%= button_to [video, :publish], method: :patch, class: "btn btn-default btn-xs" do %>
-          <%= glyph('ok') %> <%= t("video_panel.publish") %>
+          <%= glyph('ok') %> <%= t("panel.publish") %>
         <% end %>
       <% end %>
 

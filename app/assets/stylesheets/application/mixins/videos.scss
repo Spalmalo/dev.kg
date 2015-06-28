@@ -38,14 +38,6 @@
     white-space: pre-wrap;
     word-wrap: break-word;
   }
-
-  .panel {
-    .actions {
-      form, button {
-        display: inline-block;
-      }
-    }
-  }
 }
 
 @mixin video_form {

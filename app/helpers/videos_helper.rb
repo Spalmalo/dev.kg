@@ -14,7 +14,7 @@ module VideosHelper
         content_tag(:time, l(video.published_at, format: :short), datetime: video.published_at.to_s, title: l(video.published_at, format: :long))
       ].join(' ').html_safe
     else
-      content_tag :span, t('warnings.videos.not_published'), class: 'label label-warning'
+      content_tag :span, t('warnings.not_published'), class: 'label label-warning'
     end
   end
 
