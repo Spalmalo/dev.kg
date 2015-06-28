@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   end
 
   def new
+    @post.post_article ||= PostArticle.new
   end
 
   def create
@@ -50,7 +51,8 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit  :title,
-                                    :description
+                                    :description,
+                                    post_article_attributes: :content
     end
 
 end

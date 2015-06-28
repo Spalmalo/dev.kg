@@ -4,6 +4,10 @@
     <%= f.input :title %>
     <%= f.input :description, input_html: { rows: 4 }  %>
 
+    <%= f.semantic_fields_for :post_article do |post_article| %>
+      <%= render 'post_article_fields', f: post_article %>
+    <% end %>
+
   <% end %>
 
   <%= f.actions do %>

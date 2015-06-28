@@ -55,6 +55,9 @@ ru:
     asciicast: ASCIIcast
     asciicast_preview: Превью
     remove_asciicast: Удалить ASCIIcast
+  post_article_form:
+    article: Статья
+    article_preview: Превью
   clip_list:
     meta_description: Видеоролики на темы IT на русском языке
   clip_list_item:
@@ -146,7 +149,7 @@ ru:
       page:
         title: Заголовок
         content: Содержание
-      asciicast:
+      article:
         content: Текст(markdown)
     errors:
       models:
