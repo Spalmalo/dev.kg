@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe ClipsController, type: :controller do
+describe PostsController, type: :controller do
   describe "POST 'create'" do
     subject { post :create, params }
 
@@ -9,14 +9,14 @@ describe ClipsController, type: :controller do
     before { login_as user }
 
     context "when valid params given" do
-      let(:params) { { clip: attributes_for(:clip) } }
+      let(:params) { { post: attributes_for(:post) } }
 
       it "should create new screencasts" do
-        expect { subject }.to change(Clip, :count).by 1
+        expect { subject }.to change(Post, :count).by 1
       end
 
-      describe "created clip" do
-        subject { super(); Clip.last }
+      describe "created post" do
+        subject { super(); Post.last }
 
         it "should have proper user" do
           expect(subject.user).to eq user
@@ -25,10 +25,10 @@ describe ClipsController, type: :controller do
     end
 
     context "when invalid params given" do
-      let(:params) { { clip: { wrong: "params" } } }
+      let(:params) { { post: { wrong: "params" } } }
 
-      it "should not create any clips" do
-        expect { subject }.not_to change Clip, :count
+      it "should not create any screencasts" do
+        expect { subject }.not_to change Post, :count
       end
     end
 

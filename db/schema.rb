@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150628083311) do
+ActiveRecord::Schema.define(version: 20150628091348) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,7 @@ ActiveRecord::Schema.define(version: 20150628083311) do
 
   add_index "impressions", ["impressionable_id"], name: "index_impressions_on_impressionable_id", using: :btree
   add_index "impressions", ["type"], name: "index_impressions_on_type", using: :btree
-  add_index "impressions", ["user_id", "impressionable_id"], name: "index_impressions_on_user_id_and_impressionable_id", unique: true, using: :btree
+  add_index "impressions", ["user_id", "impressionable_type", "impressionable_id"], name: "uniqueness_index", unique: true, using: :btree
   add_index "impressions", ["user_id"], name: "index_impressions_on_user_id", using: :btree
 
   create_table "pages", force: :cascade do |t|
@@ -56,9 +56,11 @@ ActiveRecord::Schema.define(version: 20150628083311) do
     t.string   "title"
     t.text     "description"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.datetime "published_at"
+    t.integer  "likes_count",    default: 0
+    t.integer  "dislikes_count", default: 0
   end
 
   add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
@@ -153,7 +155,6 @@ ActiveRecord::Schema.define(version: 20150628083311) do
 
   add_foreign_key "asciicasts", "videos"
   add_foreign_key "impressions", "users"
-  add_foreign_key "impressions", "videos", column: "impressionable_id"
   add_foreign_key "posts", "users"
   add_foreign_key "references", "videos"
   add_foreign_key "snippets", "videos"

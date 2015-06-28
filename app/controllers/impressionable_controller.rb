@@ -30,7 +30,7 @@ class ImpressionableController < ApplicationController
     end
 
     def impressionable_class
-      parent_klasses = %w[clip screencast]
+      parent_klasses = %w[clip screencast post]
       parent_klasses.detect { |pk| params[:"#{pk}_id"].present? }
     end
 

@@ -15,6 +15,7 @@
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="pull-left">
+        <%= render '/impressionable/rating', impressionable: @post %>
         <span class="author"><%= t "panel.author" %>: <%= render @post.user %></span>
 
         <%= share_options if @post.published? %>

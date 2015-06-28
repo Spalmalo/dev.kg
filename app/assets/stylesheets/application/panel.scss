@@ -4,4 +4,13 @@
       display: inline-block;
     }
   }
+
+  #rating, .author {
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  #rating {
+    margin-right: 10px;
+  }
 }

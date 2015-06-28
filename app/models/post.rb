@@ -1,6 +1,8 @@
 class Post < ActiveRecord::Base
   include Sluggable
+  include Auditable
   include Publishable
+  include Impressionable
 
   belongs_to :user, inverse_of: :posts, required: true
 
